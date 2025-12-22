@@ -6,7 +6,7 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   ...(process.env.NODE_ENV === 'production' ? {
     site: 'https://yinhufreedom.github.io',
-    base: 'eco',
+    base: '',
     trailingSlash: 'never',
   } : {
     site: 'https://example.com',
