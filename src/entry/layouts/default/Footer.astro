@@ -1,0 +1,22 @@
+---
+import { SITE_TITLE, OFFICIAL_WEBSITE_URL } from '@/constants/config';
+
+interface Props {
+  style?: string;
+}
+
+const { style } = Astro.props;
+const today = new Date();
+---
+
+<footer style={style}>
+  &copy; {today.getFullYear()} <a href={OFFICIAL_WEBSITE_URL} target="_blank" rel="external">{SITE_TITLE}</a> 版权所有
+</footer>
+<style>
+  footer {
+    padding: 2em 1em 6em 1em;
+    background: linear-gradient(var(--gray-gradient)) no-repeat;
+    color: rgb(var(--gray));
+    text-align: center;
+  }
+</style>

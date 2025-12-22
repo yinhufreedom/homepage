@@ -1,0 +1,19 @@
+---
+import BrandLogo from './BrandLogo.astro';
+import NavMenu from './NavMenu.astro';
+
+interface Props {
+  style?: string;
+}
+
+const { style } = Astro.props;
+---
+
+<header class="flex items-center m-0 px-5 bg-white shadow-md" style={style}>
+  <nav class="max-w-screen-xl my-0 mx-auto flex grow items-center justify-between">
+    <BrandLogo />
+    <div class="flex items-center gap-3">
+      <NavMenu />
+    </div>
+  </nav>
+</header>
