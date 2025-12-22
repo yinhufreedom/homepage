@@ -1,5 +1,8 @@
 import clsx from 'clsx';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
+import { SITE_URL_MAP } from '@/constants/config';
+import { getCurrentLocale } from '@/utils';
 import { Button, Link } from '@/components/react';
 import { ArrowRight } from '@/components/icon';
 
@@ -11,12 +14,13 @@ type ActionBarProps = {
 };
 
 function ActionBar({ className, locale }: ActionBarProps) {
+  const getLocaleUrl = getRelativeLocaleUrl.bind(null, getCurrentLocale());
+
   return (
     <div className={clsx('flex flex-col sm:flex-row gap-4 w-full sm:w-auto', className)}>
       <Button
         as={Link}
-        href="https://zcno80f2uu4b.feishu.cn/wiki/Qou1w6TmFiKIuGkcM2ZcM0Qlnnh"
-        isExternal
+        href={getLocaleUrl(SITE_URL_MAP.about)}
         size="lg"
         color="primary"
         variant="solid"

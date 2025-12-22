@@ -1,0 +1,15 @@
+---
+import DefaultLayout from '#/layouts/default';
+
+import { SITE_URL_MAP } from '@/constants/config';
+
+const meta = {
+  title: '关于',
+};
+---
+
+<DefaultLayout meta={meta}>
+  <div class="max-w-screen-xl mx-auto">
+    <a href={SITE_URL_MAP.larkAbout} target="_blank" rel="external">查看飞书知识库关于社区介绍</a>
+  </div>
+</DefaultLayout>

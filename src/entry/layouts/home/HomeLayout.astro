@@ -6,6 +6,8 @@ import DefaultLayout from '../default';
 
 import { resolveLocale } from './helper';
 import ActionBar from './ActionBar';
+import Section from './Section.astro';
+import HighlightList from './HighlightList';
 
 const locale = resolveLocale((Astro.currentLocale || I18N_DEFAULT_LOCALE) as SupportedLocale);
 ---
@@ -17,5 +19,8 @@ const locale = resolveLocale((Astro.currentLocale || I18N_DEFAULT_LOCALE) as Sup
       <p class="m-0 text-xl sm:text-2xl text-neutral-500 text-center">{locale.slogan}</p>
       <ActionBar className="mt-12" locale={locale} client:visible />
     </div>
+    <Section title={locale.highlights}>
+      <HighlightList locale={locale} client:visible />
+    </Section>
   </article>
 </DefaultLayout>

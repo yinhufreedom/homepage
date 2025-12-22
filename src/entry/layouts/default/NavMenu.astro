@@ -2,7 +2,7 @@
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
 import type { SupportedLocale, NavKey } from '@/types';
-import { I18N_DEFAULT_LOCALE, I18N_CONFIG } from '@/constants/config';
+import { SITE_URL_MAP, I18N_DEFAULT_LOCALE, I18N_CONFIG } from '@/constants/config';
 
 import HeaderLink from './HeaderLink.astro';
 
@@ -16,7 +16,10 @@ const i18n = I18N_CONFIG[locale];
 const getLocaleUrl = getRelativeLocaleUrl.bind(null, locale);
 
 const navs: SiteNav[] = [
-  { key: 'guides', path: 'https://zcno80f2uu4b.feishu.cn/wiki/space/7537188932808359940' },
+  { key: 'events', path: SITE_URL_MAP.events },
+  // { key: 'projects', path: SITE_URL_MAP.projects },
+  // { key: 'lark', path: SITE_URL_MAP.larkRepo },
+  { key: 'about', path: SITE_URL_MAP.about },
 ];
 ---
 

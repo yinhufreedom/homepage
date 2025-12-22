@@ -8,8 +8,13 @@ type SiteConfig = {
 };
 
 type NavConfig = {
+  events: string;
+  projects: string;
   guides: string;
   posts: string;
+  sponsor: string;
+  about: string;
+  lark: string;
 };
 
 type LocaleConfig = {
