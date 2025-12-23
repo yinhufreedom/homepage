@@ -1,0 +1,43 @@
+---
+import ActionBar from './ActionBar';
+import DataOverview from './DataOverview.astro';
+
+import type { HomeLocale } from './typing';
+import banner from './banner.jpg';
+
+interface Props {
+  locale: HomeLocale;
+}
+
+const { locale } = Astro.props;
+---
+
+<div class="HeroSection h-[640px] bg-no-repeat bg-center bg-cover" style={`background-image: url("${banner.src}");`}>
+  <div class="HeroSection-content max-w-screen-xl mx-auto flex flex-col items-center justify-center">
+    <h1 class="mb-6 text-6xl sm:text-8xl font-extrabold text-center text-white" style="text-shadow: 3px 3px 24px #000;">{locale.heading}</h1>
+    <p class="m-0 text-xl sm:text-2xl text-neutral-100 text-center" style="text-shadow: 3px 3px 24px #000;">{locale.slogan}</p>
+    <ActionBar className="mt-12" locale={locale} client:visible />
+    <DataOverview class="w-full sm:max-w-4xl absolute top-full" style="transform: translateY(-50%);" />
+  </div>
+</div>
+
+<style>
+  .HeroSection {
+    position: relative;
+  }
+
+  .HeroSection::before,
+  .HeroSection-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .HeroSection::before {
+    content: "\0020";
+    background-color: #000;
+    opacity: .5;
+  }
+</style>

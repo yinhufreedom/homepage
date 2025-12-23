@@ -1,0 +1,30 @@
+---
+interface Props {
+  class?: string;
+  style?: string;
+}
+
+const { class: customClass, style } = Astro.props;
+
+const indexes = [
+  { label: '线上社群成员', value: '380+' },
+  { label: '举办活动', value: '53' },
+  { label: '参加活动人数', value: '100+' },
+  { label: '长期合作伙伴', value: '6' },
+];
+---
+
+<div class:list={['grid grid-cols-1 sm:grid-cols-4 py-9 rounded-[36px] shadow-2xl bg-white', customClass]} style={style}>
+  {indexes.map(index => (
+    <div class="DataIndex flex flex-col items-center">
+      <div class="DataIndex-value text-5xl font-semibold">{index.value}</div>
+      <div class="DataIndex-label text-lg mt-2">{index.label}</div>
+    </div>
+  ))}
+</div>
+
+<style>
+  .DataIndex + .DataIndex {
+    border-left: 1px solid #eee;
+  }
+</style>
