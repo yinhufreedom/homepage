@@ -1,0 +1,18 @@
+---
+interface Props {
+  class?: string;
+  title: string;
+  description: string;
+  poster: string;
+}
+
+const { class: customClass, title, description, poster } = Astro.props;
+---
+
+<div class:list={['box-border border-1 overflow-hidden pr-4 rounded-lg bg-white shadow-xl', customClass]}>
+  <div class="float-left overflow-hidden w-36 aspect-[3/4] mr-4 bg-no-repeat bg-center bg-cover" style={`background-image: url("${poster}");`}>
+    <img class="sr-only" src={poster} alt={title} />
+  </div>
+  <h3 class="pt-4 text-xl font-semibold">{title}</h3>
+  <p class="text-sm">{description}</p>
+</div>

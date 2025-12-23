@@ -1,0 +1,65 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+import type { SupportedLocale } from '@/types';
+import { SITE_URL_MAP, I18N_DEFAULT_LOCALE } from '@/constants/config';
+
+import SeriesCard from './SeriesCard.astro';
+import banner from './banner.jpg';
+import talkPoster from './talk.jpg';
+import walkPoster from './walk.jpg';
+import bookPoster from './book.jpg';
+import zhengnianPoster from './zhengnian.jpg';
+import businessPoster from './business.jpg';
+import ruyijian from './ruyijian.jpg';
+
+const locale = (Astro.currentLocale || I18N_DEFAULT_LOCALE) as SupportedLocale;
+const getLocaleUrl = getRelativeLocaleUrl.bind(null, locale);
+
+const seriesList = [
+  {
+    title: '非确定唠嗑儿',
+    description: '社区每周固定活动，周三或周四举办，大家坐在一起畅聊，在增加彼此了解的同时，看能否碰撞出新项目、新合作的火花。',
+    poster: talkPoster.src,
+  },
+  {
+    title: '一起去走走',
+    description: '每月至少一次的户外活动，可以是徒步、骑行、露营等，在锻炼与社交之余，还能一定程度协作。',
+    poster: walkPoster.src,
+  },
+  {
+    title: '正念+',
+    description: '将正念与运动、艺术、生活场景多元融合，在专注觉察中唤醒内在力量，开启身心平衡的探索之旅。',
+    poster: zhengnianPoster.src,
+  },
+  {
+    title: '银湖线下读书会',
+    description: '暂无描述',
+    poster: bookPoster.src,
+  },
+  {
+    title: '个体商业变现',
+    description: '由「瑰夏」主理人显宁老师带来的帮助自由职业者、小微创业者发掘自我与品牌优势并更好进行商业变现的系列活动。',
+    poster: businessPoster.src,
+  },
+];
+---
+
+<div class="grid gap-4 lg:gap-9 grid-cols-1 sm:grid-cols-3">
+  {seriesList.map(series => {
+    return (
+      <SeriesCard {...series} />
+    );
+  })}
+  <div
+    class="relative box-border border-1 overflow-hidden pr-4 rounded-lg bg-white bg-no-repeat bg-center bg-cover shadow-xl"
+    style={`background-image: url("${ruyijian.src}");`}
+  >
+    <a
+      class="absolute inset-0 z-50 flex items-center justify-center bg-black/50 hover:bg-black/70 transition-all"
+      href={getLocaleUrl(SITE_URL_MAP.events)}
+    >
+      <span class="flex items-center gap-2 px-4 leading-10 border border-current rounded-full text-white/70 hover:text-white transition-all">查看全部活动</span>
+    </a>
+  </div>
+</div>

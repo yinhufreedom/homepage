@@ -9,7 +9,7 @@ import HeroSection from './HeroSection.astro';
 import Section from './Section.astro';
 import HighlightList from './HighlightList';
 import StrategicProjectList from './StrategicProjectList';
-import FeaturedSeriesList from './FeaturedSeriesList';
+import FeaturedSeriesList from './FeaturedSeriesList.astro';
 
 const locale = resolveLocale((Astro.currentLocale || I18N_DEFAULT_LOCALE) as SupportedLocale);
 ---
@@ -25,7 +25,7 @@ const locale = resolveLocale((Astro.currentLocale || I18N_DEFAULT_LOCALE) as Sup
         <StrategicProjectList client:visible />
       </Section>
       <Section title="特色活动" class="mt-24">
-        <FeaturedSeriesList client:visible />
+        <FeaturedSeriesList />
       </Section>
     </div>
   </article>
