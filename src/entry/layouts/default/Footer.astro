@@ -1,5 +1,7 @@
 ---
-import { SITE_TITLE, OFFICIAL_WEBSITE_URL } from '@/constants/config';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+import { SITE_TITLE, I18N_DEFAULT_LOCALE } from '@/constants/config';
 
 interface Props {
   style?: string;
@@ -7,10 +9,11 @@ interface Props {
 
 const { style } = Astro.props;
 const today = new Date();
+const getLocaleUrl = getRelativeLocaleUrl.bind(null, Astro.currentLocale || I18N_DEFAULT_LOCALE);
 ---
 
 <footer style={style}>
-  &copy; {today.getFullYear()} <a href={OFFICIAL_WEBSITE_URL} target="_blank" rel="external">{SITE_TITLE}</a> 保留所有权利
+  &copy; {today.getFullYear()} <a href={getLocaleUrl('/')}>{SITE_TITLE}</a> 保留所有权利 ❤️ 由 <a href="https://yinhufreedom.github.io" target="_blank" rel="external">银湖软件开发小组</a> 提供技术支持
 </footer>
 <style>
   footer {
