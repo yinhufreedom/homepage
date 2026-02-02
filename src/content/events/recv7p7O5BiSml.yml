@@ -5,3 +5,6 @@ price: '0'
 timeRange:
   - 1767938400000
   - 1767945600000
+place: 启明舍
+source:
+  - 合作

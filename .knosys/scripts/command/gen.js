@@ -21,7 +21,13 @@ module.exports = {
     ensureDirExists(distDirPath, true);
 
     readDirDeeply(sourceDirPath, ['eventId'], {}, eventId => {
-      saveData(joinPath(distDirPath, `${eventId}.yml`), readData(joinPath(sourceDirPath, eventId, 'basic.yml')));
+      const { organization, cancelled, ...others } = readData(joinPath(sourceDirPath, eventId, 'basic.yml'));
+
+      if (cancelled || !organization.includes('银湖创联')) {
+        return;
+      }
+
+      saveData(joinPath(distDirPath, `${eventId}.yml`), others);
     });
   },
 };

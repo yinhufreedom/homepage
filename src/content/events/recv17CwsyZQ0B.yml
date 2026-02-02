@@ -5,3 +5,6 @@ price: '0'
 timeRange:
   - 1762221600000
   - 1762228800000
+place: RAY-COFFEE-TEA
+source:
+  - 合作
