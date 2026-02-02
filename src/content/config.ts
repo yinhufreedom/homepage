@@ -13,6 +13,18 @@ const posts = defineCollection({
   }),
 });
 
+const events = defineCollection({
+  type: 'data',
+  schema: z.object({
+    id: z.string(),
+    name: z.string(),
+    description: z.string(),
+    price: z.string(),
+    timeRange: z.array(z.number()).length(2),
+  }),
+});
+
 export const collections = {
   posts,
+  events,
 };
