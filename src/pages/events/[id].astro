@@ -1,0 +1,107 @@
+---
+import { getCollection } from 'astro:content';
+import dayjs from 'dayjs';
+
+import DefaultLayout from '#/layouts/default';
+
+// 为动态路由生成静态路径
+export async function getStaticPaths() {
+  const events = await getCollection('events');
+  return events.map(event => ({
+    params: { id: event.data.id },
+    props: { event },
+  }));
+}
+
+const { id } = Astro.params;
+
+let event;
+try {
+  // 使用 getCollection 查找匹配 id 的活动
+  const events = await getCollection('events');
+  event = events.find(e => e.data.id === id);
+} catch (error) {
+  console.error('Error loading event:', error);
+  return Astro.redirect('/events');
+}
+
+if (!event) {
+  return Astro.redirect('/events');
+}
+
+const eventData = event.data;
+
+const meta = {
+  title: eventData.name,
+  description: eventData.description || `活动详情 - ${eventData.name}`,
+};
+
+// 使用 dayjs 格式化时间
+const startTime = dayjs(eventData.timeRange[0]).format('YYYY-MM-DD HH:mm');
+const endTime = dayjs(eventData.timeRange[1]).format('YYYY-MM-DD HH:mm');
+---
+
+<DefaultLayout meta={meta}>
+  <div class="py-12">
+    <div class="container mx-auto px-4">
+      <!-- 返回列表按钮 -->
+      <div class="mb-6">
+        <a
+          href="/events/"
+          class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 transition-colors duration-300"
+        >
+          ← 返回活动列表
+        </a>
+      </div>
+
+      <!-- 页面标题 -->
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold">{eventData.name}</h1>
+      </div>
+
+      <!-- 活动详情卡片 -->
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <!-- 活动描述 -->
+        {eventData.description ? (
+          <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-3">活动描述</h2>
+            <div class="text-gray-700 whitespace-pre-line">{eventData.description}</div>
+          </div>
+        ) : null}
+
+        <!-- 活动信息 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h2 class="text-xl font-semibold mb-3">活动信息</h2>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="font-medium w-24">开始时间：</span>
+                <span>{startTime}</span>
+              </li>
+              <li class="flex items-start">
+                <span class="font-medium w-24">结束时间：</span>
+                <span>{endTime}</span>
+              </li>
+              {eventData.place && (
+                <li class="flex items-start">
+                  <span class="font-medium w-24">活动地点：</span>
+                  <span>{eventData.place}</span>
+                </li>
+              )}
+              <li class="flex items-start">
+                <span class="font-medium w-24">活动价格：</span>
+                <span>{eventData.price}</span>
+              </li>
+              {eventData.source && eventData.source.length > 0 && (
+                <li class="flex items-start">
+                  <span class="font-medium w-24">活动来源：</span>
+                  <span>{eventData.source.join(', ')}</span>
+                </li>
+              )}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DefaultLayout>
