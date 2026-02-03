@@ -21,6 +21,8 @@ const events = defineCollection({
     description: z.string(),
     price: z.string(),
     timeRange: z.array(z.number()).length(2),
+    place: z.string().optional(),
+    source: z.union([z.string(), z.array(z.string())]).optional(),
   }),
 });
 

@@ -16,6 +16,7 @@ const SITE_URL_MAP = {
   larkEventsCal: 'https://zcno80f2uu4b.feishu.cn/share/base/view/shrcnEQnjhzKDxEjrGaR3uqi1Db',
   larkRepo: 'https://zcno80f2uu4b.feishu.cn/wiki/space/7537188932808359940',
   larkAbout: 'https://zcno80f2uu4b.feishu.cn/wiki/Qou1w6TmFiKIuGkcM2ZcM0Qlnnh',
+  digitalYinhu: 'https://zcno80f2uu4b.feishu.cn/app/LmJBbUXsmaInOdsUfw0cRDtHnHb',
 };
 
 const I18N_DEFAULT_LOCALE = 'zh';

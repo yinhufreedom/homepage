@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+
+import DefaultLayout from '#/layouts/default';
+
+import { SITE_URL_MAP } from '@/constants/config';
+
+import EventPage from './EventPage';
+
+const meta = {
+  title: '活动',
+};
+
+const events = await getCollection('events');
+// 转换为 EventPage 组件需要的格式
+const eventData = events.map(event => event.data);
+---
+
+<DefaultLayout meta={meta}>
+  <div class="max-w-screen-xl mx-auto py-12">
+    <h1 class="text-3xl font-bold mb-2">活动列表</h1>
+    <p class="text-gray-600 mb-8">银湖创联的社区活动</p>
+
+    <EventPage events={eventData} client:only="react" />
+
+    <div class="mt-12 flex justify-center">
+      <a
+        href={SITE_URL_MAP.digitalYinhu}
+        target="_blank"
+        rel="external"
+        class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors inline-block"
+      >
+        到「数字银湖（暂名）」查看更多活动
+      </a>
+    </div>
+  </div>
+</DefaultLayout>
