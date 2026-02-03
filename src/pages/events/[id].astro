@@ -1,8 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
-import dayjs from 'dayjs';
 
 import DefaultLayout from '#/layouts/default';
+import { formatTimeRangeWithWeekday } from '~/events/utils';
 
 // 为动态路由生成静态路径
 export async function getStaticPaths() {
@@ -36,9 +36,8 @@ const meta = {
   description: eventData.description || `活动详情 - ${eventData.name}`,
 };
 
-// 使用 dayjs 格式化时间
-const startTime = dayjs(eventData.timeRange[0]).format('YYYY-MM-DD HH:mm');
-const endTime = dayjs(eventData.timeRange[1]).format('YYYY-MM-DD HH:mm');
+// 使用共享工具函数格式化时间
+const eventTime = formatTimeRangeWithWeekday(eventData.timeRange[0], eventData.timeRange[1]);
 ---
 
 <DefaultLayout meta={meta}>
@@ -75,12 +74,8 @@ const endTime = dayjs(eventData.timeRange[1]).format('YYYY-MM-DD HH:mm');
             <h2 class="text-xl font-semibold mb-3">活动信息</h2>
             <ul class="space-y-2">
               <li class="flex items-start">
-                <span class="font-medium w-24">开始时间：</span>
-                <span>{startTime}</span>
-              </li>
-              <li class="flex items-start">
-                <span class="font-medium w-24">结束时间：</span>
-                <span>{endTime}</span>
+                <span class="font-medium w-24">活动时间：</span>
+                <span>{eventTime}</span>
               </li>
               {eventData.place && (
                 <li class="flex items-start">
@@ -92,6 +87,20 @@ const endTime = dayjs(eventData.timeRange[1]).format('YYYY-MM-DD HH:mm');
                 <span class="font-medium w-24">活动价格：</span>
                 <span>{eventData.price}</span>
               </li>
+              {eventData.registration && (
+                <li class="flex items-start">
+                  <span class="font-medium w-24">报名方式：</span>
+                  <span>
+                    {typeof eventData.registration === 'string' && (eventData.registration.startsWith('http://') || eventData.registration.startsWith('https://') || eventData.registration.startsWith('#小程序:')) ? (
+                      <a href={eventData.registration} rel="noopener noreferrer" class="text-blue-600 hover:underline">
+                        {eventData.registration}
+                      </a>
+                    ) : (
+                      eventData.registration
+                    )}
+                  </span>
+                </li>
+              )}
               {eventData.source && eventData.source.length > 0 && (
                 <li class="flex items-start">
                   <span class="font-medium w-24">活动来源：</span>

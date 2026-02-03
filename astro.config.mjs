@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
+import path from 'path';
 
 export default defineConfig({
   ...(process.env.NODE_ENV === 'production' ? {
@@ -19,4 +20,13 @@ export default defineConfig({
     react({ experimentalReactChildren: true }),
     tailwind(),
   ],
+  vite: {
+    resolve: {
+      alias: {
+        '@': path.resolve('./src/shared'),
+        '~': path.resolve('./src/domain'),
+        '#': path.resolve('./src/entry'),
+      },
+    },
+  },
 });

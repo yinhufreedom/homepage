@@ -23,6 +23,7 @@ const events = defineCollection({
     timeRange: z.array(z.number()).length(2),
     place: z.string().optional(),
     source: z.union([z.string(), z.array(z.string())]).optional(),
+    registration: z.string().optional(),
   }),
 });
 

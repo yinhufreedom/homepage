@@ -1,5 +1,5 @@
 ---
-import { KNOSYS_GEN_DATA } from '@/constants/knosys';
+import { getCollection } from 'astro:content';
 
 interface Props {
   class?: string;
@@ -8,9 +8,10 @@ interface Props {
 
 const { class: customClass, style } = Astro.props;
 
+const events = await getCollection('events');
 const indexes = [
   { label: '线上社群成员', value: '380+' },
-  { label: '举办活动', value: KNOSYS_GEN_DATA.eventCount.toString() },
+  { label: '举办活动', value: events.length.toString() },
   { label: '参加活动人数', value: '100+' },
   { label: '长期合作伙伴', value: '6' },
 ];
