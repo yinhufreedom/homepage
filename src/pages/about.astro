@@ -14,25 +14,29 @@ const communityHighlights = [
     title: '家门口的社交场',
     description: '解决了在家附近找到同类人交流的困难，让你在家门口就能找到志同道合的伙伴。',
     icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z',
-    bgColor: 'blue'
+    bgClass: 'bg-blue-100',
+    textClass: 'text-blue-600'
   },
   {
     title: '跨领域交流',
     description: '汇聚不同领域的专业人士，促进跨行业的思想碰撞和合作机会，帮助你开拓视野。',
     icon: 'M13 10V3L4 14h7v7l9-11h-7z',
-    bgColor: 'green'
+    bgClass: 'bg-green-100',
+    textClass: 'text-green-600'
   },
   {
     title: '丰富的活动',
     description: '提供多种多样的社区活动，满足不同兴趣爱好和专业需求，让你的生活更加充实。',
     icon: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z',
-    bgColor: 'amber'
+    bgClass: 'bg-amber-100',
+    textClass: 'text-amber-600'
   },
   {
     title: '节省时间成本',
     description: '不用再长途跋涉前往良渚等较远的地方，在家门口就能享受高质量的社区活动。',
     icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
-    bgColor: 'purple'
+    bgClass: 'bg-purple-100',
+    textClass: 'text-purple-600'
   },
 ];
 
@@ -74,8 +78,8 @@ const communityMembers = [
           {communityHighlights.map((highlight, index) => (
             <div key={index} class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
               <div class="flex items-start">
-                <div class={`flex-shrink-0 bg-${highlight.bgColor}-100 rounded-full p-3`}>
-                  <svg class={`h-6 w-6 text-${highlight.bgColor}-600`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class={`flex-shrink-0 ${highlight.bgClass} rounded-full p-3`}>
+                  <svg class={`h-6 w-6 ${highlight.textClass}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={highlight.icon} />
                   </svg>
                 </div>
