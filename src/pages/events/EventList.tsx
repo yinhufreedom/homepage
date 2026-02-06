@@ -39,11 +39,6 @@ const EventList: React.FC<EventListProps> = ({ events, emptyMessage, isPast = fa
                     <h4 className="text-lg font-semibold md:truncate">{event.name}</h4>
                   </div>
                   <div className="space-y-4">
-                    {event.description && (
-                      <p className="text-gray-600">
-                        {event.description}
-                      </p>
-                    )}
                     <div className="space-y-2">
                       <div className="flex items-center">
                         <Calendar className="w-4 h-4 text-gray-500 mr-2" />

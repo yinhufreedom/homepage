@@ -4,12 +4,149 @@ import DefaultLayout from '#/layouts/default';
 import { SITE_URL_MAP } from '@/constants/config';
 
 const meta = {
-  title: '关于',
+  title: '关于银湖创联',
+  description: '银湖创联是扎根于富阳银湖的去中心化在地社区，连接自由职业者、小微创业者、远程工作者、数字游民和探索副业的打工人。',
 };
+
+// 社区亮点列表
+const communityHighlights = [
+  {
+    title: '家门口的社交场',
+    description: '解决了在家附近找到同类人交流的困难，让你在家门口就能找到志同道合的伙伴。',
+    icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z',
+    bgColor: 'blue'
+  },
+  {
+    title: '跨领域交流',
+    description: '汇聚不同领域的专业人士，促进跨行业的思想碰撞和合作机会，帮助你开拓视野。',
+    icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+    bgColor: 'green'
+  },
+  {
+    title: '丰富的活动',
+    description: '提供多种多样的社区活动，满足不同兴趣爱好和专业需求，让你的生活更加充实。',
+    icon: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z',
+    bgColor: 'amber'
+  },
+  {
+    title: '节省时间成本',
+    description: '不用再长途跋涉前往良渚等较远的地方，在家门口就能享受高质量的社区活动。',
+    icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
+    bgColor: 'purple'
+  },
+];
+
+// 社区成员职业列表
+const communityMembers = [
+  '自由职业者',
+  '小微创业者',
+  '远程工作者',
+  '数字游民',
+  '探索副业的打工人',
+  '在校生/应届生',
+];
 ---
 
 <DefaultLayout meta={meta}>
-  <div class="max-w-screen-xl mx-auto">
-    <a href={SITE_URL_MAP.larkAbout} target="_blank" rel="external">查看飞书知识库关于社区介绍</a>
+  <div class="py-16 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 页面标题 */}
+      <div class="text-center mb-16">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">关于银湖创联</h1>
+        <p class="text-xl text-gray-600">连接银湖在地的自由创造者</p>
+      </div>
+
+      {/* 社区介绍 */}
+      <div class="bg-white rounded-xl shadow-md p-8 mb-12">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-6">社区简介</h2>
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          「银湖创联」又名「银湖自由社区」，是扎根于富阳银湖的去中心化在地社区，旨在连接生活和工作在银湖的自由职业者、小微创业者、远程工作者、数字游民、探索副业的打工人等。
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          我们相信，当不同领域的创造者聚集在一起，能够产生更多的创意和合作机会，共同推动银湖的发展与繁荣。
+        </p>
+      </div>
+
+      {/* 社区亮点 */}
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-8 text-center">社区亮点</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {communityHighlights.map((highlight, index) => (
+            <div key={index} class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+              <div class="flex items-start">
+                <div class={`flex-shrink-0 bg-${highlight.bgColor}-100 rounded-full p-3`}>
+                  <svg class={`h-6 w-6 text-${highlight.bgColor}-600`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={highlight.icon} />
+                  </svg>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-gray-900 mb-2">{highlight.title}</h3>
+                  <p class="text-gray-600">
+                    {highlight.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 目标人群 */}
+      <div class="bg-white rounded-xl shadow-md p-8 mb-12">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-6">我们的社区成员</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {communityMembers.map((member, index) => (
+            <div key={index} class="bg-gray-50 rounded-lg p-6">
+              <p class="text-gray-800 font-medium h-full flex items-center justify-center">{member}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 社区链接 */}
+      <div class="text-center mb-12">
+        <a
+          href={SITE_URL_MAP.larkRepo}
+          target="_blank"
+          rel="external"
+          class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+        >
+          查看更多社区介绍
+          <svg class="ml-2 -mr-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+
+      {/* 合作机会 */}
+      <div class="bg-white rounded-xl shadow-md p-8 mb-12">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-6">合作机会</h2>
+        <p class="text-gray-700 mb-4">
+          「银湖创联」既是社区又是组织，作为组织时基本是指社区运营团队，其主要依托两个社区分别服务对应群体：
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-gray-600 mb-4">
+          <li><span class="font-medium">银湖创联（银湖自由社区）</span>：服务银湖的已有或探索个人事业的人；</li>
+          <li><span class="font-medium">银湖大社区</span>：联合其他个人与组织一起服务在银湖或对银湖感兴趣的所有人。</li>
+        </ul>
+        <p class="text-gray-700">
+          我们欢迎任何匹配的个人和组织来洽谈合作事宜。
+        </p>
+      </div>
+
+      {/* 合作链接 */}
+      <div class="text-center">
+        <a
+          href="https://zcno80f2uu4b.feishu.cn/wiki/K6Cew3G7xifZdLk5aEccfWabn9f"
+          target="_blank"
+          rel="external"
+          class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors"
+        >
+          查看详细合作指南
+          <svg class="ml-2 -mr-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
   </div>
 </DefaultLayout>
