@@ -2,17 +2,17 @@ import React from 'react';
 
 import { SITE_URL_MAP } from '@/constants/config';
 import { Calendar, MapPin, DollarSign, Clock } from '@/components/icon';
-import type { EventData } from '~/event/typing';
+import type { Event } from '../../typing';
 import {
   formatTimeRange,
   getEventStatus,
   getEventStatusText,
   getEventStatusClass,
   getPriceClass
-} from '~/event/helper';
+} from '../../helper';
 
 interface EventListProps {
-  events: EventData[];
+  events: Event[];
   emptyMessage: string;
   isPast?: boolean;
 }
@@ -67,7 +67,6 @@ const EventList: React.FC<EventListProps> = ({ events, emptyMessage, isPast = fa
                     </div>
                   </div>
                 </a>
-                {/* 历史活动列表中最后一个活动添加半透明遮罩 */}
                 {isPast && index === events.length - 1 && (
                   <a
                     className="absolute inset-0 bg-black/50 hover:bg-black/70 rounded-lg flex items-center justify-center text-white font-medium transition-all"

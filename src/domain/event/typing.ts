@@ -1,4 +1,4 @@
-export type EventData = {
+export interface Event {
   id: string;
   name: string;
   description: string;
@@ -7,4 +7,4 @@ export type EventData = {
   place?: string;
   source?: string | string[];
   registration?: string;
-};
+}

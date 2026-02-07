@@ -3,14 +3,13 @@ import { getCollection } from 'astro:content';
 
 import DefaultLayout from '#/layouts/default';
 
-import EventPage from './EventPage';
+import EventPage from '~/event/widgets/event-page';
 
 const meta = {
   title: '银湖创联的社区活动',
 };
 
 const events = await getCollection('events');
-// 转换为 EventPage 组件需要的格式
 const eventData = events.map(event => event.data);
 ---
 

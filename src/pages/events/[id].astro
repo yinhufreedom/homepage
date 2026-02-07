@@ -4,7 +4,6 @@ import { getCollection } from 'astro:content';
 import DefaultLayout from '#/layouts/default';
 import { formatTimeRangeWithWeekday } from '~/event/helper';
 
-// 为动态路由生成静态路径
 export async function getStaticPaths() {
   const events = await getCollection('events');
   return events.map(event => ({
@@ -17,7 +16,6 @@ const { id } = Astro.params;
 
 let event;
 try {
-  // 使用 getCollection 查找匹配 id 的活动
   const events = await getCollection('events');
   event = events.find(e => e.data.id === id);
 } catch (error) {
@@ -36,7 +34,6 @@ const meta = {
   description: eventData.description || `活动详情 - ${eventData.name}`,
 };
 
-// 使用共享工具函数格式化时间
 const eventTime = formatTimeRangeWithWeekday(eventData.timeRange[0], eventData.timeRange[1]);
 ---
 

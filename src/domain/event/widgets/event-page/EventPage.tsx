@@ -1,21 +1,19 @@
 import { useState } from 'react';
 
-import EventList from './EventList';
-import type { EventData } from '../../domain/event/types';
+import EventList from '../event-list';
+import type { Event } from '../../typing';
 
 interface EventPageProps {
-  events: EventData[];
+  events: Event[];
 }
 
 function EventPage({ events }: EventPageProps) {
   const [activeTab, setActiveTab] = useState('upcoming');
   const currentTime = Date.now();
 
-  // 过滤并分类活动
   const upcomingEvents = events
     .filter(event => event.timeRange[1] > currentTime)
     .sort((a, b) => {
-      // 按开始时间顺序排列，开始时间相同则按结束时间顺序排列
       if (a.timeRange[0] !== b.timeRange[0]) {
         return a.timeRange[0] - b.timeRange[0];
       }
@@ -25,17 +23,15 @@ function EventPage({ events }: EventPageProps) {
   const pastEvents = events
     .filter(event => event.timeRange[1] <= currentTime)
     .sort((a, b) => {
-      // 按开始时间倒序排列，开始时间相同则按结束时间倒序排列
       if (a.timeRange[0] !== b.timeRange[0]) {
         return b.timeRange[0] - a.timeRange[0];
       }
       return b.timeRange[1] - a.timeRange[1];
     })
-    .slice(0, 30); // 只取前 30 条历史活动
+    .slice(0, 30);
 
   return (
     <div className="w-full">
-      {/* 选项卡导航 */}
       <div className="border-b border-gray-200 mb-6">
         <nav className="-mb-px flex justify-center space-x-8">
           <button
@@ -53,7 +49,6 @@ function EventPage({ events }: EventPageProps) {
         </nav>
       </div>
 
-      {/* 选项卡内容 */}
       <div className="space-y-4">
         {activeTab === 'upcoming' && (
           <EventList events={upcomingEvents} emptyMessage="暂无剩余活动" isPast={false} />
