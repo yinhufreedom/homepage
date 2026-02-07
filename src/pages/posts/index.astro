@@ -1,29 +1,14 @@
 ---
-import { getCollection } from 'astro:content';
-
 import DefaultLayout from '#/layouts/default';
-
-import PostCard from '~/post/widgets/post-card';
-
-const allPosts = await getCollection('posts');
-
-allPosts.sort((a, b) => {
-  const dateA = new Date(a.data.date).getTime();
-  const dateB = new Date(b.data.date).getTime();
-  return dateB - dateA;
-});
+import { getPaginatedPosts, getAllPostsData, formatDate, PostCard } from '~/post';
 
 const postsPerPage = 30;
-const initialPosts = allPosts.slice(0, postsPerPage);
-const totalPosts = allPosts.length;
-const totalPages = Math.ceil(totalPosts / postsPerPage);
+const currentPage = 1;
 
-const allPostsData = allPosts.map(post => ({
-  slug: post.slug,
-  title: post.data.title,
-  description: post.data.description,
-  date: post.data.date
-}));
+const paginatedResult = await getPaginatedPosts(currentPage, postsPerPage);
+const { posts, totalPages, totalPosts } = paginatedResult;
+
+const allPostsData = await getAllPostsData();
 
 const meta = {
   title: '社区文章',
@@ -41,12 +26,12 @@ const meta = {
 
       <div class="max-w-6xl mx-auto">
         <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {initialPosts.map((post) => (
+          {posts.map((post) => (
             <PostCard
               slug={post.slug}
-              title={post.data.title}
-              description={post.data.description}
-              date={post.data.date}
+              title={post.title}
+              description={post.description}
+              date={post.date}
             />
           ))}
         </div>
@@ -76,7 +61,7 @@ const meta = {
     </div>
   </div>
 
-  <script define:vars={{ allPosts: allPostsData, postsPerPage, totalPages }}>
+  <script define:vars={{ allPosts: allPostsData, postsPerPage, totalPages, formatDate }}>
     let currentPage = 1;
 
     const postsContainer = document.getElementById('posts-container');
@@ -137,11 +122,7 @@ const meta = {
         const articleEl = document.createElement('article');
         articleEl.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col';
 
-        const formattedDate = new Date(post.date).toLocaleDateString('zh-CN', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
-        });
+        const formattedDate = formatDate(post.date);
 
         articleEl.innerHTML = `
           <div class="p-6 flex flex-col flex-grow">

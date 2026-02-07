@@ -1,11 +1,17 @@
 ---
-const { slug, title, description, date } = Astro.props;
+import type { PostData } from '../../typing';
+import { formatDate } from '../../helper';
 
-const formattedDate = new Date(date).toLocaleDateString('zh-CN', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric'
-});
+interface Props {
+  slug: string;
+  title: string;
+  description: string;
+  date: Date;
+}
+
+const { slug, title, description, date }: Props = Astro.props;
+
+const formattedDate = formatDate(date);
 ---
 
 <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
