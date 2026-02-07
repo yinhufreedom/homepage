@@ -1,0 +1,64 @@
+---
+import { getCollection, render } from 'astro:content';
+
+import DefaultLayout from '#/layouts/default';
+
+// 生成静态路径
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+}
+
+// 获取当前文章数据
+const { post } = Astro.props;
+
+const { title, description, date } = post.data;
+
+const meta = {
+  title,
+  description,
+};
+
+const { Content } = await render(post);
+---
+
+<DefaultLayout meta={meta}>
+  <div class="py-12">
+    <div class="container mx-auto px-4">
+      {/* 返回列表按钮 */}
+      <div class="mb-8">
+        <a
+          href="/posts"
+          class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 transition-colors duration-300"
+        >
+          ← 返回文章列表
+        </a>
+      </div>
+
+      {/* 文章内容 */}
+      <div class="max-w-3xl mx-auto">
+        {/* 文章标题和元信息 */}
+        <div class="mb-8 text-center">
+          <h1 class="text-3xl font-bold text-gray-900 mb-4">{title}</h1>
+          <div class="text-gray-500 mb-6">
+            {new Date(date).toLocaleDateString('zh-CN', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </div>
+        </div>
+
+        {/* 文章正文 */}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <article class="prose prose-lg max-w-none prose-text-gray-800">
+            <Content />
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</DefaultLayout>

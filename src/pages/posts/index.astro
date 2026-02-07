@@ -1,0 +1,238 @@
+---
+import DefaultLayout from '#/layouts/default';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('posts');
+
+// 按日期倒序排序
+allPosts.sort((a, b) => {
+  const dateA = new Date(a.data.date).getTime();
+  const dateB = new Date(b.data.date).getTime();
+  return dateB - dateA;
+});
+
+const postsPerPage = 30;
+const initialPosts = allPosts.slice(0, postsPerPage);
+const totalPosts = allPosts.length;
+const totalPages = Math.ceil(totalPosts / postsPerPage);
+
+// 准备所有文章数据，用于前端分页
+const allPostsData = allPosts.map(post => ({
+  slug: post.slug,
+  title: post.data.title,
+  description: post.data.description,
+  date: post.data.date
+}));
+
+const meta = {
+  title: '社区文章',
+  description: '银湖创联的社区文章和活动记录',
+};
+---
+
+<DefaultLayout meta={meta}>
+  <div class="py-16 bg-gradient-to-b from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      {/* 页面标题 */}
+      <div class="text-center mb-16">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">社区文章</h1>
+        <p class="text-xl text-gray-600">记录银湖创联的精彩瞬间和故事</p>
+      </div>
+
+      {/* 文章列表 */}
+      <div class="max-w-6xl mx-auto">
+        <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* 服务端渲染的前20条文章 */}
+          {initialPosts.map((post) => (
+            <article key={post.slug} class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
+              <div class="p-6 flex flex-col flex-grow">
+                <div class="mb-4">
+                  <h2 class="text-xl font-semibold text-gray-900 mb-2">
+                    <a href={`/posts/${post.slug}`} class="hover:text-blue-600 transition-colors">
+                      {post.data.title}
+                    </a>
+                  </h2>
+                  <p class="text-gray-600">{post.data.description}</p>
+                </div>
+                <div class="mt-auto flex justify-between items-center">
+                  <div class="text-sm text-gray-500">
+                    {new Date(post.data.date).toLocaleDateString('zh-CN', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </div>
+                  <a href={`/posts/${post.slug}`} class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800">
+                    阅读全文
+                    <svg class="ml-2 -mr-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* 分页控件 */}
+        {totalPages > 1 && (
+          <div class="mt-12">
+            <div class="flex justify-between items-center">
+              <nav class="inline-flex rounded-md shadow">
+                <button id="prev-btn" class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-l-md hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-blue-500 focus:text-blue-600" disabled>
+                  上一页
+                </button>
+
+                {/* 页码按钮容器 */}
+                <div id="page-buttons" class="flex border-t border-b border-gray-300">
+                  {/* 页码按钮将通过 JavaScript 动态生成 */}
+                </div>
+
+                <button id="next-btn" class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-r-md hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-blue-500 focus:text-blue-600">
+                  下一页
+                </button>
+              </nav>
+              <div class="text-sm text-gray-600">
+                第 <span id="current-page">1</span> 页，共 <span id="total-pages">{totalPages}</span> 页
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <!-- 前端分页交互代码 -->
+  <script define:vars={{ allPosts: allPostsData, postsPerPage, totalPages }}>
+    let currentPage = 1;
+
+    const postsContainer = document.getElementById('posts-container');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const currentPageEl = document.getElementById('current-page');
+    const pageButtonsContainer = document.getElementById('page-buttons');
+
+    // 生成页码按钮
+    function generatePageButtons() {
+      if (!pageButtonsContainer) return;
+
+      // 清空容器
+      pageButtonsContainer.innerHTML = '';
+
+      // 生成页码按钮
+      for (let i = 1; i <= totalPages; i++) {
+        const pageBtn = document.createElement('button');
+        pageBtn.className = `px-4 py-2 text-sm font-medium border-r border-gray-300 ${currentPage === i ? 'bg-blue-50 text-blue-600 border-blue-300' : 'bg-white text-gray-700 hover:bg-gray-50'}`;
+        pageBtn.textContent = i;
+        pageBtn.addEventListener('click', () => {
+          renderPosts(i);
+        });
+        pageButtonsContainer.appendChild(pageBtn);
+      }
+    }
+
+    // 更新分页按钮状态
+    function updatePaginationButtons() {
+      prevBtn.disabled = currentPage === 1;
+      nextBtn.disabled = currentPage === totalPages;
+
+      // 更新按钮样式
+      if (currentPage === 1) {
+        prevBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        prevBtn.classList.remove('hover:bg-gray-50');
+      } else {
+        prevBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        prevBtn.classList.add('hover:bg-gray-50');
+      }
+
+      if (currentPage === totalPages) {
+        nextBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        nextBtn.classList.remove('hover:bg-gray-50');
+      } else {
+        nextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        nextBtn.classList.add('hover:bg-gray-50');
+      }
+
+      // 更新页码按钮状态
+      generatePageButtons();
+    }
+
+    // 渲染指定页的文章
+    function renderPosts(page) {
+      const startIndex = (page - 1) * postsPerPage;
+      const endIndex = startIndex + postsPerPage;
+      const pagePosts = allPosts.slice(startIndex, endIndex);
+
+      // 清空容器
+      postsContainer.innerHTML = '';
+
+      // 确保容器保持网格布局
+      postsContainer.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
+
+      // 渲染文章
+      pagePosts.forEach(post => {
+        const articleEl = document.createElement('article');
+        articleEl.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col';
+
+        const formattedDate = new Date(post.date).toLocaleDateString('zh-CN', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+        articleEl.innerHTML = `
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="mb-4">
+              <h2 class="text-xl font-semibold text-gray-900 mb-2">
+                <a href="/posts/${post.slug}" class="hover:text-blue-600 transition-colors">
+                  ${post.title}
+                </a>
+              </h2>
+              <p class="text-gray-600">${post.description}</p>
+            </div>
+            <div class="mt-auto flex justify-between items-center">
+              <div class="text-sm text-gray-500">
+                ${formattedDate}
+              </div>
+              <a href="/posts/${post.slug}" class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800">
+                阅读全文
+                <svg class="ml-2 -mr-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        `;
+
+        postsContainer.appendChild(articleEl);
+      });
+
+      // 更新当前页码
+      currentPageEl.textContent = page;
+      currentPage = page;
+
+      // 更新按钮状态
+      updatePaginationButtons();
+    }
+
+    // 绑定分页按钮事件
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        if (currentPage > 1) {
+          renderPosts(currentPage - 1);
+        }
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        if (currentPage < totalPages) {
+          renderPosts(currentPage + 1);
+        }
+      });
+    }
+
+    // 初始生成页码按钮
+    generatePageButtons();
+  </script>
+</DefaultLayout>
