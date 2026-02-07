@@ -1,0 +1,2 @@
+name: handie-modular-structure
+description: 创建和管理 Handie 框架模块化目录结构，支持 Astro 框架。在启动新的 Handie 项目、添加领域模块或重构为模块化架构时调用。

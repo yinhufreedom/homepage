@@ -26,4 +26,5 @@ pnpm-debug.log*
 .idea/
 
 .editorconfig
-.vscode
+.vscode/
+.trae/
