@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import EventList from './EventList';
-import type { EventData } from '../../domain/events/types';
+import type { EventData } from '../../domain/event/types';
 
 interface EventPageProps {
   events: EventData[];

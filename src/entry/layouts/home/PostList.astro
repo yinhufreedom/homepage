@@ -1,0 +1,63 @@
+---
+import { getCollection } from 'astro:content';
+
+import { SITE_URL_MAP } from '@/constants/config';
+
+import PostCard from '~/post/widgets/post-card';
+
+const allPosts = await getCollection('posts');
+
+allPosts.sort((a, b) => {
+  const dateA = new Date(a.data.date).getTime();
+  const dateB = new Date(b.data.date).getTime();
+  return dateB - dateA;
+});
+
+const allPostsData = allPosts.map(post => ({
+  slug: post.slug,
+  title: post.data.title,
+  description: post.data.description,
+  date: post.data.date
+}));
+
+const displayPosts = allPostsData.slice(0, 5);
+const lastPost = allPostsData[5];
+---
+
+<div class="grid gap-4 lg:gap-9 grid-cols-1 sm:grid-cols-3">
+  {displayPosts.map(post => (
+    <PostCard {...post} />
+  ))}
+
+  <article class="relative bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col">
+    <div class="p-6 flex flex-col flex-grow">
+      <div class="mb-4">
+        <h2 class="text-xl font-semibold text-gray-900 mb-2">
+          {lastPost.title}
+        </h2>
+        <p class="text-gray-600">{lastPost.description}</p>
+      </div>
+      <div class="mt-auto flex justify-between items-center">
+        <div class="text-sm text-gray-500">
+          {new Date(lastPost.date).toLocaleDateString('zh-CN', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          })}
+        </div>
+        <a href={`/posts/${lastPost.slug}`} class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800">
+          阅读全文
+          <svg class="ml-2 -mr-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <a
+      class="absolute inset-0 z-50 flex items-center justify-center bg-black/50 hover:bg-black/70 transition-all"
+      href={SITE_URL_MAP.posts}
+    >
+      <span class="flex items-center gap-2 px-4 leading-10 border border-current rounded-full text-white/70 hover:text-white transition-all">查看更多文章</span>
+    </a>
+  </article>
+</div>

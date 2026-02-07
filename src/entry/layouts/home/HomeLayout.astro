@@ -10,6 +10,7 @@ import Section from './Section.astro';
 import HighlightList from './HighlightList';
 import StrategicProjectList from './StrategicProjectList';
 import FeaturedSeriesList from './FeaturedSeriesList.astro';
+import PostList from './PostList.astro';
 
 const locale = resolveLocale((Astro.currentLocale || I18N_DEFAULT_LOCALE) as SupportedLocale);
 ---
@@ -26,6 +27,9 @@ const locale = resolveLocale((Astro.currentLocale || I18N_DEFAULT_LOCALE) as Sup
       </Section>
       <Section title="特色活动" class="mt-24">
         <FeaturedSeriesList />
+      </Section>
+      <Section title="社区文章" class="mt-24">
+        <PostList />
       </Section>
     </div>
   </article>
