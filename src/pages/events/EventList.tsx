@@ -2,14 +2,14 @@ import React from 'react';
 
 import { SITE_URL_MAP } from '@/constants/config';
 import { Calendar, MapPin, DollarSign, Clock } from '@/components/icon';
-import type { EventData } from '~/event/types';
+import type { EventData } from '~/event/typing';
 import {
   formatTimeRange,
   getEventStatus,
   getEventStatusText,
   getEventStatusClass,
   getPriceClass
-} from '~/event/utils';
+} from '~/event/helper';
 
 interface EventListProps {
   events: EventData[];
