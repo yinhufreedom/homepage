@@ -17,7 +17,8 @@ const allPostsData = allPosts.map(post => ({
   slug: post.slug,
   title: post.data.title,
   description: post.data.description,
-  date: post.data.date
+  date: post.data.date,
+  banner: post.data.banner
 }));
 
 const displayPosts = allPostsData.slice(0, 5);

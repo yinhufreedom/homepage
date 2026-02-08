@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 
-const { title, description, date } = post.data;
+const { title, description, date, banner } = post.data;
 
 const meta = {
   title,
@@ -39,6 +39,17 @@ const { Content } = await render(post);
 
       {/* 文章内容 */}
       <div class="max-w-3xl mx-auto">
+        {/* Banner 图片 */}
+        {banner && (
+          <div class="mb-8 rounded-lg overflow-hidden shadow-md">
+            <img
+              src={banner}
+              alt={title}
+              class="w-full h-auto object-cover"
+            />
+          </div>
+        )}
+
         {/* 文章标题和元信息 */}
         <div class="mb-8 text-center">
           <h1 class="text-3xl font-bold text-gray-900 mb-4">{title}</h1>

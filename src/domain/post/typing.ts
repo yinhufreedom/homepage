@@ -7,6 +7,7 @@ export interface PostData {
   title: string;
   description: string;
   date: Date;
+  banner?: string | null;
 }
 
 export interface PaginationResult {

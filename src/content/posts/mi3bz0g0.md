@@ -2,23 +2,24 @@
 title: 你的产品描述，正在悄悄赶走潜在客户！
 description: 为何你的产品介绍总吸引不到对的人？活动现场揭露常见误区，三步扭转局面。
 date: 2025-11-18 00:00:00 +0800
+banner: 
 ---
 
 周二上午，大家再次相聚硅谷小镇客厅的会议室，多数人参加过之前的「[个体商业变现](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=MzYyNDI1NDY4Mg==&scene=2&album_id=4252307827437256712&count=3#wechat_redirect)」系列活动。
 
-
+![](/images/post-mi3bz0g0/01.jpg)
 
 这第三场活动《产品难卖？因为你当“标品”卖，内核一片糊涂》是上场《[销售乏力？因为你还在“推销”，而非“链接”](https://mp.weixin.qq.com/s/C4JPqqNq62TzsRiTV4WkdQ)》的后续深化版。
 
 由于本场活动的主题是「抓取自己品牌或产品的内核」，每位参与者的互动式练习是从自己的品牌或产品角度切入的。
 
-
+![](/images/post-mi3bz0g0/02.jpg)
 
 参与者所从事的具体领域，有的是从热爱等自身角度出发，有的则是从市场调研角度——这两种出发点各有利弊。
 
 大家在用自己的语言介绍过品牌或产品后，经显宁老师点拨，各自的局限性立马显现了出来——描述用语就框定了受众范围，排除掉了其他群体。
 
-
+![](/images/post-mi3bz0g0/03.jpg)
 
 还记得老师在[第一场活动](https://mp.weixin.qq.com/s/vwYDkyOWIZN4jm9C0uQGaA)时，结合参与者的穿着、自我介绍言辞、点的饮品等就已经对每个人的内核有个初步判断。
 

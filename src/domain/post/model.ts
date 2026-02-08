@@ -6,6 +6,7 @@ export function toPostData(post: Post): PostData {
     title: post.data.title,
     description: post.data.description,
     date: post.data.date,
+    banner: post.data.banner,
   };
 }
 
