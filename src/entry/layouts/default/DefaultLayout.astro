@@ -35,9 +35,9 @@ setCurrentLocale(locale);
   <body>
     <AppProvider locale={locale} client:only="react" />
     <Header style="position: relative; z-index: 1; height: 64px; margin-bottom: -64px;" />
-    <main class="min-h-full m-auto pt-[64px] pb-[180px]">
+    <main class="min-h-full m-auto pt-[64px]">
       <slot />
     </main>
-    <Footer style="height: 180px; margin-top: -180px;" />
+    <Footer />
   </body>
 </html>

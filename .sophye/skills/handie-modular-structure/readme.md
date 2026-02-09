@@ -167,9 +167,15 @@ project/src
 - **typing.ts**: 领域的类型定义
 - **index.ts**: 模块的公共 API 导出
 
-### 4. 代码风格
+### 4. 组件存放规则
+- **就近原则**：组件应存放在引用它的文件的同一文件夹下，避免创建不必要的子文件夹
+- **示例**：如果 `Footer.astro` 需要一个 `SocialFollowButton` 组件，应将该组件放在与 `Footer.astro` 同级的位置，而不是创建单独的 `components` 子文件夹
+- **引用方式**：使用相对路径直接引用同级组件，如 `import Component from './Component.astro'`
+- **优势**：减少目录层级，提高代码可读性，便于维护
 
-#### 4.1 命名规范
+### 5. 代码风格
+
+#### 5.1 命名规范
 - **目录和文件命名**
   - 组件相关的模板、脚本和样式文件使用大驼峰式：`ComponentName.astro`、`ComponentName.ts`、`ComponentName.scss`
   - 目录及与组件无关的文件使用肉串式：`directory-name`、`file-name.js`、`file-name.jpg`
@@ -185,7 +191,7 @@ project/src
   - 返回其他类型的函数：使用 `get-`、`find-` 等开头的动宾结构
   - 事件处理函数：使用 `handle-` 或 `on-` 开头
 
-#### 4.2 编程范式
+#### 5.2 编程范式
 - **函数优先**：创建新的 TypeScript 或 JavaScript 代码时，优先使用函数
 - **函数式编程**：优先使用纯函数、函数组合和不可变数据
   - 参数不可变，不允许直接修改入参
@@ -197,7 +203,7 @@ project/src
   - 可被派生类访问的类成员使用 `protected`
   - 仅能被实例访问的类成员使用 `private`
 
-#### 4.3 TypeScript 规范
+#### 5.3 TypeScript 规范
 - 变量/属性定义、函数/方法定义、函数/方法参数、函数/方法返回值都需要标明类型
 - 禁止使用 `any`
 - 有 `return` 关键字的函数/方法被视为有返回值
@@ -205,16 +211,16 @@ project/src
 - 异步函数/方法的返回值为 `Promise<T>`
 - 标为 `readonly` 的类属性只能被赋值一次
 
-#### 4.4 导出方式
+#### 5.4 导出方式
 - 使用命名导出函数，便于 tree-shaking 和按需导入
 - 组件可以使用默认导出
 
-#### 4.5 其他规范
+#### 5.5 其他规范
 - 使用英文单词命名，不可使用拼音、汉字等
 - 用词需要简洁、达意
 - 风格一致的代码，看起来像是一个人写的
 
-### 5. Astro 特殊目录
+### 6. Astro 特殊目录
 - **content/**: Astro 的内容集合，存储 Markdown/MDX 文件
   - 每个内容集合对应一个领域模块
   - 通过 `content/config.ts` 配置集合
@@ -223,7 +229,7 @@ project/src
   - 从 `content/` 获取数据
   - 使用 `entry/layouts/` 中的布局
 
-### 6. 共享资源
+### 7. 共享资源
 - **components/**: 可复用的 UI 组件（control、widget、renderer）
 - **styles/**: 全局样式和工具
 - **types/**: 共享类型定义（包括内容类型）
