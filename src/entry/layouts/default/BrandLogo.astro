@@ -2,15 +2,14 @@
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
 import { SITE_TITLE, I18N_DEFAULT_LOCALE } from '@/constants/config';
-
-import logo from './logo.jpg';
+import Logo from '@/components/astro/logo';
 
 const getLocaleUrl = getRelativeLocaleUrl.bind(null, Astro.currentLocale || I18N_DEFAULT_LOCALE);
 ---
 
 <div class="flex items-center">
   <a class="size-10" href={getLocaleUrl('/')}>
-    <img class="size-full" src={logo.src} alt={SITE_TITLE} />
+    <Logo />
   </a>
   <span class="w-[1px] h-6 ml-3 mr-3.5 bg-slate-300"></span>
   <a class="text-2xl/none text-gray-800 hover:text-gray-500" href={getLocaleUrl('/')}>{SITE_TITLE}</a>

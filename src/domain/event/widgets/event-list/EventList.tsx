@@ -70,7 +70,7 @@ const EventList: React.FC<EventListProps> = ({ events, emptyMessage, isPast = fa
                 {isPast && index === events.length - 1 && (
                   <a
                     className="absolute inset-0 bg-black/50 hover:bg-black/70 rounded-lg flex items-center justify-center text-white font-medium transition-all"
-                    href={SITE_URL_MAP.digitalYinhu}
+                    href={SITE_URL_MAP.digitalYinhuApp}
                     target="_blank"
                     rel="external"
                     title="到「数字银湖（暂名）」查看更多活动"

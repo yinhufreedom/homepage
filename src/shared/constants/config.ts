@@ -14,7 +14,10 @@ const SITE_URL_MAP = {
   sponsor: '/sponsor',
   about: '/about',
   larkRepo: 'https://zcno80f2uu4b.feishu.cn/wiki/space/7537188932808359940',
-  digitalYinhu: 'https://zcno80f2uu4b.feishu.cn/app/LmJBbUXsmaInOdsUfw0cRDtHnHb',
+  yinhuCommunitySpace: 'https://zcno80f2uu4b.feishu.cn/wiki/space/7575097612517280713',
+  digitalYinhuApp: 'https://zcno80f2uu4b.feishu.cn/app/LmJBbUXsmaInOdsUfw0cRDtHnHb',
+  digitalYinhuDoc: 'https://zcno80f2uu4b.feishu.cn/wiki/BtMawPJyhihv9zkLqWMchd7vnNg',
+  contact: 'https://zcno80f2uu4b.feishu.cn/wiki/W2vkw09Sxi3g2ckF2uIcKRTynu3',
 };
 
 const I18N_DEFAULT_LOCALE = 'zh';
