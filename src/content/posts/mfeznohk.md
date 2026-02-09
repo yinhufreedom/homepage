@@ -11,13 +11,13 @@ banner:
 
 本以为这场不期而至的秋雨会为我们的首次「非确定唠嗑儿」活动带来些许冷清，结果却令人惊喜又感动——除了三位提前请假的小伙伴，其余报名者全员到场。
 
-![](/images/post-mfeznohk/01.jpg)
+![](/images/collection/posts/mfeznohk/01.jpg)
 
-![](/images/post-mfeznohk/02.jpg)
+![](/images/collection/posts/mfeznohk/02.jpg)
 
-![](/images/post-mfeznohk/03.jpg)
+![](/images/collection/posts/mfeznohk/03.jpg)
 
-![](/images/post-mfeznohk/04.jpg)
+![](/images/collection/posts/mfeznohk/04.jpg)
 
 下午两点，银湖硅谷小镇客厅内，13 位来自不同领域的创造者陆续抵达。
 
@@ -31,7 +31,7 @@ banner:
 
 还有银湖科技城公众号主编、区域招商运营官、保险顾问、视觉设计师……
 
-![](/images/post-mfeznohk/05.jpg)
+![](/images/collection/posts/mfeznohk/05.jpg)
 
 这不像一场刻意组织的活动，更像一群志同道合的老友聚会。
 
@@ -53,19 +53,19 @@ banner:
 
 下午五点，雨暂歇。大家迅速移至大厅，留下了一张珍贵的合影。笑容轻松，姿态自然，仿佛不是初次见面，而是老友重逢。
 
-![](/images/post-mfeznohk/06.jpg)
+![](/images/collection/posts/mfeznohk/06.jpg)
 
 而原本计划五点结束的活动，直到近七点才真正落幕。
 
 合影结束后，大多数人依然不愿离去，而是自发形成三三两两的小圈，继续刚才未尽的话题——有的相约下次参观工作室，有的直接探讨起合作可能，有的则分享起自己的人生转折。
 
-![](/images/post-mfeznohk/07.jpg)
+![](/images/collection/posts/mfeznohk/07.jpg)
 
-![](/images/post-mfeznohk/08.jpg)
+![](/images/collection/posts/mfeznohk/08.jpg)
 
-![](/images/post-mfeznohk/09.jpg)
+![](/images/collection/posts/mfeznohk/09.jpg)
 
-![](/images/post-mfeznohk/10.jpg)
+![](/images/collection/posts/mfeznohk/10.jpg)
 
 **三、我们为什么坚持「线下」见面？**
 

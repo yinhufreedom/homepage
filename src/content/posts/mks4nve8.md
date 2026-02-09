@@ -9,34 +9,34 @@ banner:
 
 从一杯温热的养生茶开始，杯盏相碰，祝福交织——「平安喜乐」「好发柿生」，恰如我们此刻相聚的心愿。
 
-![](/images/post-mks4nve8/01.jpg)
+![](/images/collection/posts/mks4nve8/01.jpg)
 
 大家围坐畅谈，分享着自己与八段锦结缘的故事：有人亲眼见证邻居练习后精气神焕然一新，心生向往；有人偶然体验一次，被其柔和舒展中蕴藏的「神奇」吸引；也有人带着明确的期待，希望借由这源远流长的功法，缓解久坐带来的腰部不适……
 
 不同的起点，相同的向往，让我们在此相遇。
 
-![](/images/post-mks4nve8/02.jpg)
+![](/images/collection/posts/mks4nve8/02.jpg)
 
 我们走到户外，在绿意与楼影之间，开启了一场专注的身体对话。
 
 从「双手托天理三焦」到「左右开弓似射雕」，大家认真投入，彼此参照、互相调整。
 
-![](/images/post-mks4nve8/09.jpg)
+![](/images/collection/posts/mks4nve8/09.jpg)
 
-![](/images/post-mks4nve8/05.jpg)
+![](/images/collection/posts/mks4nve8/05.jpg)
 
 有初学的专注，也有同伴间自然而然的帮助与指导——那一刻，动作不仅是动作，更是气息、意念与彼此信任的流动。
 
-![](/images/post-mks4nve8/08.jpg)
+![](/images/collection/posts/mks4nve8/08.jpg)
 
-![](/images/post-mks4nve8/06.jpg)
+![](/images/collection/posts/mks4nve8/06.jpg)
 
-![](/images/post-mks4nve8/04.jpg)
+![](/images/collection/posts/mks4nve8/04.jpg)
 
 我们知道，呼吸的配合、松紧的节奏，非一日之功。
 
 无需着急，正如这养生之道，贵在坚持，重在感知。我们鼓励大家：慢慢来，每周留一点时间给身体，在自然的怀抱中，通过这流传千年的「自然功法」，重新建立与自我的联结。
 
-![](/images/post-mks4nve8/07.jpg)
+![](/images/collection/posts/mks4nve8/07.jpg)
 
 感谢每一位到来的你，让这个午后充满意义。我们下周再会，继续在舒展中，见自己，见天地，见生活。

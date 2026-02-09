@@ -21,13 +21,13 @@ banner:
 
 人齐后，我们朝着大洋坞水库进发。
 
-![](/images/post-mfsgfls0/IMG_1356.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1356.JPG)
 
-![](/images/post-mfsgfls0/IMG_1358.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1358.JPG)
 
-![](/images/post-mfsgfls0/IMG_1360.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1360.JPG)
 
-![](/images/post-mfsgfls0/IMG_1362.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1362.JPG)
 
 由于队伍中只有一人不是大家都认识，我们便一边徒步，一边互相了解，气氛轻松愉快。
 
@@ -37,7 +37,7 @@ banner:
 
 路过水库，穿过一段小土路后，视野豁然开朗，一片竹林映入眼帘。
 
-![](/images/post-mfsgfls0/IMG_1406.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1406.JPG)
 
 此情此景让人不禁想起前几天 G 老师弹奏古琴的模样，若是能在此地演奏一曲，配上微风、落叶和鸟鸣，该是何等雅致！
 
@@ -49,9 +49,9 @@ banner:
 
 待他表示好转并能继续前行后，我们才再次启程。
 
-![](/images/post-mfsgfls0/IMG_1382.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1382.JPG)
 
-![](/images/post-mfsgfls0/IMG_1407.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1407.JPG)
 
 一路上，大家都不忘关心他的状态，这种相互照应的氛围让人感到温暖，体现了家人般的情谊。
 
@@ -59,15 +59,15 @@ banner:
 
 当我们抵达第一个岔路口的鉴远亭时，天空已经淅淅沥沥地下起了小雨。
 
-![](/images/post-mfsgfls0/IMG_1408.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1408.JPG)
 
 山间云雾缭绕，对面的山头完全隐没在雾气中，反倒营造出一种仙境般的氛围。
 
-![](/images/post-mfsgfls0/IMG_1409.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1409.JPG)
 
-![](/images/post-mfsgfls0/IMG_1410.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1410.JPG)
 
-![](/images/post-mfsgfls0/IMG_1411.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1411.JPG)
 
 我们聊着南北爬山的差异、各自喜欢的动漫影视作品，在玄学隐秘和职场吐槽的欢歌笑语中，轻松穿过了第二个岔路口的飞凤岩。
 
@@ -77,7 +77,7 @@ banner:
 
 刚到那里，他们正要离开，我们赶紧请其中一位妈妈帮忙拍了张合照。
 
-![](/images/post-mfsgfls0/IMG_1412.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1412.JPG)
 
 由于水汽弥漫，根本眺望不到任何景色，我们没有过多逗留，直接开启了下半程的旅程。
 
@@ -85,7 +85,7 @@ banner:
 
 反穿路线的最大惊喜在于：之前顺时针走时那两段陡峭艰难的上山路，在这次逆时针行走中变成了下山路，难度大大降低，给人一种「降维打击」的快感！
 
-![](/images/post-mfsgfls0/IMG_1413.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1413.JPG)
 
 下山途中，我们遇到了很多爬山的人，其中还有一些亲子队伍，看到孩子们都能坚持徒步，让人不禁为之点赞。
 
@@ -93,17 +93,17 @@ banner:
 
 即将到达山脚时，我们远远看到似乎有摆摊。
 
-![](/images/post-mfsgfls0/IMG_1415.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1415.JPG)
 
 走近一看，居然是油炸东坞山豆腐皮！肚子正饿的我们立刻被这香气吸引，决定尝一尝这当地特色。
 
-![](/images/post-mfsgfls0/IMG_1414.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1414.JPG)
 
-![](/images/post-mfsgfls0/IMG_1416.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1416.JPG)
 
 薄如蝉翼的豆腐皮经过油炸，撒上辣椒粉，酥脆鲜香，为这次三小时多的慢悠悠徒步画上了完美的句号。
 
-![](/images/post-mfsgfls0/IMG_1405.JPG)
+![](/images/collection/posts/mfsgfls0/IMG_1405.JPG)
 
 **结语**
 

@@ -2,7 +2,7 @@
 import DefaultLayout from '#/layouts/default';
 import { getPaginatedPosts, getAllPostsData, formatDate, PostCard } from '~/post';
 
-const postsPerPage = 30;
+const postsPerPage = 24;
 const currentPage = 1;
 
 const paginatedResult = await getPaginatedPosts(currentPage, postsPerPage);
@@ -62,7 +62,7 @@ const meta = {
     </div>
   </div>
 
-  <script define:vars={{ allPosts: allPostsData, postsPerPage, totalPages, formatDate }}>
+  <script define:vars={{ allPosts: allPostsData, postsPerPage, totalPages }}>
     let currentPage = 1;
 
     const postsContainer = document.getElementById('posts-container');
@@ -70,6 +70,14 @@ const meta = {
     const nextBtn = document.getElementById('next-btn');
     const currentPageEl = document.getElementById('current-page');
     const pageButtonsContainer = document.getElementById('page-buttons');
+
+    function formatDate(date) {
+      return new Date(date).toLocaleDateString('zh-CN', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
+    }
 
     function generatePageButtons() {
       if (!pageButtonsContainer) return;
@@ -125,25 +133,26 @@ const meta = {
 
         const hasBanner = post.banner !== null && post.banner !== undefined;
 
+        // 使用与 PostCard 组件一致的样式
+        articleEl.className = 'rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col bg-white';
+
+        let bannerHtml = '';
         if (hasBanner) {
-          articleEl.className = 'bg-cover bg-center bg-gray-900/80 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col';
-          articleEl.style.backgroundImage = `url('${post.banner}')`;
+          bannerHtml = `<div class="w-full h-48 bg-cover bg-center" style="background-image: url('${post.banner}')"></div>`;
         } else {
-          articleEl.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col';
-          articleEl.style.backgroundImage = '';
+          bannerHtml = `<div class="w-full h-48 bg-gray-200"></div>`;
         }
 
-        const contentClass = hasBanner ? 'bg-gray-100/90' : '';
-
         articleEl.innerHTML = `
-          <div class="p-6 flex flex-col flex-grow ${contentClass}">
+          ${bannerHtml}
+          <div class="p-6 flex flex-col flex-grow">
             <div class="mb-4">
               <h2 class="text-xl font-semibold mb-2 text-gray-900">
                 <a href="/posts/${post.slug}" class="hover:text-blue-600 transition-colors">
                   ${post.title}
                 </a>
               </h2>
-              <p class="text-gray-600">${post.description}</p>
+              <p class="text-gray-600 md:line-clamp-2">${post.description}</p>
             </div>
             <div class="mt-auto flex justify-between items-center">
               <div class="text-sm text-gray-500">

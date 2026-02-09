@@ -13,15 +13,15 @@ banner:
 
 碎石铺地，白蜡烛摇曳，暖黄纸灯散发柔和光芒，墙上挂着主理人的蓝晒作品，草编的蒲团散落在竹编的榻榻米上。
 
-![](/images/post-mfqezz94/IMG_1169.JPG)
+![](/images/collection/posts/mfqezz94/IMG_1169.JPG)
 
-![](/images/post-mfqezz94/IMG_1172.JPG)
+![](/images/collection/posts/mfqezz94/IMG_1172.JPG)
 
-![](/images/post-mfqezz94/IMG_1174.JPG)
+![](/images/collection/posts/mfqezz94/IMG_1174.JPG)
 
-![](/images/post-mfqezz94/IMG_1170.JPG)
+![](/images/collection/posts/mfqezz94/IMG_1170.JPG)
 
-![](/images/post-mfqezz94/IMG_1171.JPG)
+![](/images/collection/posts/mfqezz94/IMG_1171.JPG)
 
 这个空间，仿佛专门为「放下忙碌，安心交谈」而设计。
 
@@ -40,9 +40,9 @@ banner:
 - 空间平面设计师，表达了对中国传统文化的热爱；
 - Unity 中文课堂讲师，同时也是银湖创联共建者，透露了正在筹备的跨界「黑客松」。
 
-![](/images/post-mfqezz94/IMG_1155.JPG)
+![](/images/collection/posts/mfqezz94/IMG_1155.JPG)
 
-![](/images/post-mfqezz94/IMG_1152.JPG)
+![](/images/collection/posts/mfqezz94/IMG_1152.JPG)
 
 **古琴声起，雨声伴奏，心灵沉静**
 
@@ -50,7 +50,7 @@ banner:
 
 琴声悠扬，与窗外的雨声、鸟鸣声交织在一起，形成天然的和声。
 
-![](/images/post-mfqezz94/IMG_1154.JPG)
+![](/images/collection/posts/mfqezz94/IMG_1154.JPG)
 
 那一刻，所有人都安静下来，闭上眼睛，让心灵随着每一个音符飘荡。
 
@@ -74,15 +74,15 @@ banner:
 
 下午五点，我们拍了合影。
 
-![](/images/post-mfqezz94/IMG_1156.JPG)
+![](/images/collection/posts/mfqezz94/IMG_1156.JPG)
 
 但活动并没有结束——有人开始三两成群深入交流，互换联系方式；有人继续席地而坐，开展关于创业的深度探讨。
 
-![](/images/post-mfqezz94/IMG_1157.JPG)
+![](/images/collection/posts/mfqezz94/IMG_1157.JPG)
 
 直到晚上八点，还有人不愿离去。
 
-![](/images/post-mfqezz94/IMG_1159.JPG)
+![](/images/collection/posts/mfqezz94/IMG_1159.JPG)
 
 为什么我们需要这样的相遇？
 

@@ -29,7 +29,7 @@ banner:
 
 因而，作为自由职业者最省力的商业系统为：见自己 → 见天下 → 见众生。
 
-![](/images/post-mhjbt340/wechat-moment.jpg)
+![](/images/collection/posts/mhjbt340/wechat-moment.jpg)
 
 整场内容听下来，大致可以总结为：
 
@@ -39,7 +39,7 @@ banner:
 
 上述几点，不就是银湖创联社区定位的一方面嘛：
 
-![](/images/post-mhjbt340/ppt.png)
+![](/images/collection/posts/mhjbt340/ppt.png)
 
 这系列沙龙的第二场活动《销售乏力？因为你还在“推销”，而非“链接”》正在报名中，名额有限：
 

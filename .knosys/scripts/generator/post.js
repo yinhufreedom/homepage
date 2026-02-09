@@ -7,6 +7,29 @@ function getIdFromDate(date = new Date) {
   return (typeof date === 'string' ? new Date(date) : date).getTime().toString(36);
 }
 
+function extractImageReferences(content) {
+  const imageReferences = new Set();
+
+  // Extract images using different patterns
+  const patterns = [
+    // Markdown images: ![alt](image.jpg)
+    { regex: /!\[.*?\]\(([^)]+)\)/g, group: 1 },
+    // HTML images: <img src="image.jpg">
+    { regex: /<img[^>]+src=["']([^"']+)["']/g, group: 1 }
+  ];
+
+  patterns.forEach(({ regex, group }) => {
+    let match;
+    while ((match = regex.exec(content)) !== null) {
+      const imagePath = match[group];
+      const baseName = imagePath.split('/').pop();
+      imageReferences.add(baseName);
+    }
+  });
+
+  return imageReferences;
+}
+
 function generatePosts(dsDir) {
   const localRootPath = resolveRootPath();
 
@@ -17,7 +40,8 @@ function generatePosts(dsDir) {
   }
 
   const distDirPath = joinPath(localRootPath, 'src/content/posts');
-  const imageDistDirPath = joinPath(localRootPath, 'public/images');
+  const imagePathPart = 'images/collection/posts';
+  const imageDistDirPath = joinPath(localRootPath, 'public', imagePathPart);
 
   ensureDirExists(distDirPath, true);
   ensureDirExists(imageDistDirPath, true);
@@ -33,22 +57,35 @@ function generatePosts(dsDir) {
     let resolvedContent = others.content || '';
     let resolvedBanner = '';
     let resolvedCover = '';
+    let resolvedPoster = '';
 
     const postId = others.id || getIdFromDate(date);
 
     if (resolvedContent) {
-      const entityImageDirPath = joinPath(imageDistDirPath, `post-${postId}`);
+      const imageReferences = extractImageReferences(resolvedContent);
+      const entityImageDirPath = joinPath(imageDistDirPath, postId);
+
       ensureDirExists(entityImageDirPath, true);
 
       getImageFileNames(entityDirPath).forEach(baseName => {
+        const bannerFound = baseName.startsWith('banner');
+        const coverFound = baseName.startsWith('cover');
+        const posterFound = baseName.startsWith('poster');
+
+        if (!bannerFound && !coverFound && !posterFound && !imageReferences.has(baseName)) {
+          return;
+        }
+
         cp(joinPath(entityDirPath, baseName), joinPath(entityImageDirPath, baseName));
 
-        const imageRef = `/images/post-${postId}/${baseName}`;
+        const imageRef = `/${imagePathPart}/${postId}/${baseName}`;
 
-        if (baseName.startsWith('banner')) {
+        if (bannerFound) {
           resolvedBanner = imageRef;
-        } else if (baseName.startsWith('cover')) {
+        } else if (coverFound) {
           resolvedCover = imageRef;
+        } else if (posterFound) {
+          resolvedPoster = imageRef;
         }
 
         resolvedContent = resolvedContent
@@ -61,7 +98,7 @@ function generatePosts(dsDir) {
 title: ${title}
 description: ${others.description || ''}
 date: ${date}
-banner: ${resolvedBanner || resolvedCover}
+banner: ${resolvedBanner || resolvedCover || resolvedPoster}
 ---
 
 ${resolvedContent}

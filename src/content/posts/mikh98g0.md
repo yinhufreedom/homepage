@@ -2,7 +2,7 @@
 title: 银湖创联的十一月：变革、成长与社区新生
 description: 十一月银湖创联活动多元发展与体系化治理并进，开启去中心化社区新篇章。
 date: 2025-11-30 20:44:45 +0800
-banner: /images/post-mikh98g0/banner.png
+banner: /images/collection/posts/mikh98g0/banner.png
 ---
 
 银湖创联进入第二阶段已经一个月，在 11 月的最后一天，来看看过去这个月都有哪些进展。
@@ -84,14 +84,14 @@ banner: /images/post-mikh98g0/banner.png
 与「银湖创联」是服务于银湖在地想要职业自由的人不同，「银湖大社区」是面向更广泛的银湖在地人群。
 
 <figure>
-  <img src="/images/post-mikh98g0/yinhu-freedom-community.png" alt="银湖创联">
+  <img src="/images/collection/posts/mikh98g0/yinhu-freedom-community.png" alt="银湖创联">
   <figcaption>银湖创联</figcaption>
 </figure>
 
 从下月起，就要朝着形成「银湖大社区」雏形的方向使劲儿！
 
 <figure>
-  <img src="/images/post-mikh98g0/yinhu-big-community.png" alt="银湖大社区">
+  <img src="/images/collection/posts/mikh98g0/yinhu-big-community.png" alt="银湖大社区">
   <figcaption>银湖大社区</figcaption>
 </figure>
 

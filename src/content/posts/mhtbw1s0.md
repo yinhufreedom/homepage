@@ -13,7 +13,7 @@ banner:
 
 四喜器物又给大家准备了载满祝福的小物件，甚是惊喜：
 
-![](/images/post-mhtbw1s0/sixiqiwu.jpg)
+![](/images/collection/posts/mhtbw1s0/sixiqiwu.jpg)
 
 老师先打样做了自己及她的个人品牌核心理念等的说明，并引导大家在接下来的自我介绍中说出自己个人事业的卡点。
 

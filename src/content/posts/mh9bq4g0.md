@@ -2,12 +2,12 @@
 title: 重阳登高提前约！银湖创联 10 人小分队成功挑战西湖之巅
 description: 当自热火锅遇上南瓜花卷，在山顶的午餐会上聊出了人生百味。
 date: 2025-10-28 00:00:00 +0800
-banner: /images/post-mh9bq4g0/cover.png
+banner: /images/collection/posts/mh9bq4g0/cover.png
 ---
 
 秋高气爽的十月末，银湖创联的徒步小分队完成了一次特别的征程——在工作日成功登顶西湖区最高峰如意尖！
 
-![](/images/post-mh9bq4g0/12.jpg)
+![](/images/collection/posts/mh9bq4g0/12.jpg)
 
 这次原本计划在重阳节举行的活动，因为贴心的日程调整，反而成就了一场意料之外的爆满徒步。
 
@@ -27,7 +27,7 @@ banner: /images/post-mh9bq4g0/cover.png
 
 正当大家担心之际，这个临时组成的小团体展现了动人的默契：三人主动留下陪伴，其他人耐心等待。
 
-![](/images/post-mh9bq4g0/02.jpg)
+![](/images/collection/posts/mh9bq4g0/02.jpg)
 
 稍作调整后，不适的伙伴坚持跟上队伍，这种不轻言放弃的精神赢得了所有人的敬佩。
 
@@ -35,31 +35,31 @@ banner: /images/post-mh9bq4g0/cover.png
 
 从华庭云顶上山，我们先经历了一段惬意的土路漫步。
 
-![](/images/post-mh9bq4g0/01.jpg)
+![](/images/collection/posts/mh9bq4g0/01.jpg)
 
 途经两个岔路口：第一个直行，第二个选择偏左方向。
 
 土路起伏平缓，让人仿佛在山的怀抱中轻轻摇曳。
 
-![](/images/post-mh9bq4g0/03.jpg)
+![](/images/collection/posts/mh9bq4g0/03.jpg)
 
 但山的考验随即到来——连接土路的人工游步道坡度陡增，对不常爬山的人来说确实是个挑战。
 
 我们采用「走走停停」的节奏，让每个人都能按照自己的呼吸与山对话。
 
-![](/images/post-mh9bq4g0/04.jpg)
+![](/images/collection/posts/mh9bq4g0/04.jpg)
 
 约一两个小时后，那座标志性的亭子终于出现在眼前——我们成功登顶海拔 536 米的如意尖！
 
-![](/images/post-mh9bq4g0/05.jpg)
+![](/images/collection/posts/mh9bq4g0/05.jpg)
 
-![](/images/post-mh9bq4g0/06.jpg)
+![](/images/collection/posts/mh9bq4g0/06.jpg)
 
-![](/images/post-mh9bq4g0/07.jpg)
+![](/images/collection/posts/mh9bq4g0/07.jpg)
 
-![](/images/post-mh9bq4g0/08.jpg)
+![](/images/collection/posts/mh9bq4g0/08.jpg)
 
-![](/images/post-mh9bq4g0/09.jpg)
+![](/images/collection/posts/mh9bq4g0/09.jpg)
 
 **山顶的饕餮盛宴**
 
@@ -81,9 +81,9 @@ banner: /images/post-mh9bq4g0/cover.png
 
 于是我们陪他返回如意尖，在下方石板凳处休息等待。
 
-![](/images/post-mh9bq4g0/10.jpg)
+![](/images/collection/posts/mh9bq4g0/10.jpg)
 
-![](/images/post-mh9bq4g0/11.jpg)
+![](/images/collection/posts/mh9bq4g0/11.jpg)
 
 看着他坚定登顶的背影，每个人都为之动容。
 
@@ -91,31 +91,31 @@ banner: /images/post-mh9bq4g0/cover.png
 
 送别那位坚持登顶后原路返回的伙伴，我们开始了环线下山之旅。
 
-![](/images/post-mh9bq4g0/13.jpg)
+![](/images/collection/posts/mh9bq4g0/13.jpg)
 
 先是一段长下坡，稍上坡后再次下坡，经过古色古香的「如意亭」。
 
-![](/images/post-mh9bq4g0/14.jpg)
+![](/images/collection/posts/mh9bq4g0/14.jpg)
 
 在岔路口，我们选择了之字形下山路，路旁茂密的竹林为我们搭起绿色长廊。
 
-![](/images/post-mh9bq4g0/15.jpg)
+![](/images/collection/posts/mh9bq4g0/15.jpg)
 
-![](/images/post-mh9bq4g0/16.jpg)
+![](/images/collection/posts/mh9bq4g0/16.jpg)
 
 与上次探路相比，这次路况稍差，有倒下的竹子拦路，需要小心跨越。
 
-![](/images/post-mh9bq4g0/17.jpg)
+![](/images/collection/posts/mh9bq4g0/17.jpg)
 
 经过几处平台休息区时，我们停下来聊天、分享感受。
 
-![](/images/post-mh9bq4g0/18.jpg)
+![](/images/collection/posts/mh9bq4g0/18.jpg)
 
 当看到路旁的茶树时，我们知道离终点不远了。
 
 考虑到部分伙伴的体力，我们临时调整路线，改走双灵村方向的平坦铺装路，最终绕回华庭云顶起点，为这次徒步画上圆满句号。
 
-![](/images/post-mh9bq4g0/19.jpg)
+![](/images/collection/posts/mh9bq4g0/19.jpg)
 
 **徒步之后的思考**
 

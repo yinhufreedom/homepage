@@ -2,12 +2,12 @@
 title: 10 人满员！唠嗑解锁自由职业变现密码
 description: 一群跨领域、跨行业的人在咖啡香中碰撞出思维火花。
 date: 2025-10-29 00:00:00 +0800
-banner: /images/post-mhar5z40/cover.png
+banner: /images/collection/posts/mhar5z40/cover.png
 ---
 
 秋意渐浓，银湖创联的「非确定唠嗑儿」却热度攀升——第七期首次达到在瑞咖啡活动的 10 人满（超）员。
 
-![](/images/post-mhar5z40/04.jpg)
+![](/images/collection/posts/mhar5z40/04.jpg)
 
 在瑞咖啡营造的温馨空间里，展开了一场关于自由职业变现的深度探讨。
 
@@ -20,7 +20,7 @@ banner: /images/post-mhar5z40/cover.png
 
 更令人惊叹的是，这位专程远道而来的新朋友，竟与我们有着共同认识的人，再次印证了「六度分隔理论」的神奇。
 
-![](/images/post-mhar5z40/01.jpg)
+![](/images/collection/posts/mhar5z40/01.jpg)
 
 十人中有七位曾一起挑战过如意尖环线徒步，早已建立的信任让本次交流更加深入。
 
@@ -32,7 +32,7 @@ banner: /images/post-mhar5z40/cover.png
 
 当谈到扩展现实技术的应用场景时，引发了全场对未来生活可能性的好奇与想象：「也许不久的将来，我们都会戴着 AR 眼镜在山野间边徒步边办公？」
 
-![](/images/post-mhar5z40/02.jpg)
+![](/images/collection/posts/mhar5z40/02.jpg)
 
 在 AI 领域的连续创业者则坦诚分享了以往教育类产品的创业经历与失败教训。
 
@@ -46,7 +46,7 @@ banner: /images/post-mhar5z40/cover.png
 
 技术派的 XR 开发者与 AI 创业者就 AI 发展趋势与技术人的市场定位展开热烈讨论。
 
-![](/images/post-mhar5z40/03.jpg)
+![](/images/collection/posts/mhar5z40/03.jpg)
 
 三位女性参与者则聚焦亲子活动策划、教育产品设计及客户拓展方式，彼此分享的实操经验让每个人都获益匪浅。
 

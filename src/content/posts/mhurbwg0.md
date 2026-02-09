@@ -2,14 +2,14 @@
 title: 当良渚遇见银湖：一场跨城而来的唠嗑，和那些正在生长的可能
 description: 银湖创联不止于本地，已吸引跨城参与者，共同展望社区未来成长。
 date: 2025-11-12 00:00:00 +0800
-banner: /images/post-mhurbwg0/cover.png
+banner: /images/collection/posts/mhurbwg0/cover.png
 ---
 
 周三的瑞咖啡，因两位特殊客人的到来而显得格外不同——一位从良渚远道而来，一位因电鸭的缘分慕名前来。
 
 加上银湖本地正念小组的三位伙伴和其他五位老朋友，第 9 期「非确定唠嗑儿」在 10 人的满员阵容中，开启了一场跨区域的对话。
 
-![](/images/post-mhurbwg0/03.jpg)
+![](/images/collection/posts/mhurbwg0/03.jpg)
 
 **远道而来的惊喜**
 
@@ -48,9 +48,9 @@ banner: /images/post-mhurbwg0/cover.png
 
 这种不经意的分享，往往比刻意安排的环节更能拉近心与心的距离。
 
-![](/images/post-mhurbwg0/01.jpg)
+![](/images/collection/posts/mhurbwg0/01.jpg)
 
-![](/images/post-mhurbwg0/02.jpg)
+![](/images/collection/posts/mhurbwg0/02.jpg)
 
 活动结束后，两位远道而来的伙伴都表示，很喜欢这种亲近的氛围，像是到老友家闲坐聊天。
 

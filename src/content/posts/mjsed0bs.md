@@ -2,7 +2,7 @@
 title: 银湖创联的十二月：本地生活服务网络正式启航
 description: 银湖创联亮相政府活动，向各界介绍社区，为未来深化合作打下基础；并梳理三种参与路径，强化「共创」理念。
 date: 2025-12-30 17:40:49 +0800
-banner: /images/post-mjsed0bs/banner.jpg
+banner: /images/collection/posts/mjsed0bs/banner.jpg
 ---
 
 银湖创联进入第二阶段的第二个月，由于进展并未达到「神速」级别，将本阶段截止日期暂定为 2026 年 3 月末。
@@ -25,7 +25,7 @@ banner: /images/post-mjsed0bs/banner.jpg
 - 支持者网络——与社区深度合作的、能给大家提供专业产品/服务的合作伙伴；
 - 仪表盘——查看一些系统中的基础统计数据。
 
-![](/images/post-mjsed0bs/calendar.png)
+![](/images/collection/posts/mjsed0bs/calendar.png)
 
 该系统的上线并不会强制大家使用，像以往那种最常规的活动发布与报名可以正常进行；但若要享受更多的便利服务、福利权益，那就得使用该系统了。
 

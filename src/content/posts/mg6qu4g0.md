@@ -2,14 +2,14 @@
 title: 那些照亮迷茫前路的微光
 description: 一次六人三小时的咖啡馆闲聊，偏离议程却回归社区初心，成为治愈挫败感的温暖时光。
 date: 2025-10-01 00:00:00 +0800
-banner: /images/post-mg6qu4g0/cover.png
+banner: /images/collection/posts/mg6qu4g0/cover.png
 ---
 
 10 月 1 日下午，银湖创联第四次「非确定唠嗑儿」在瑞咖啡悄然进行。
 
-![](/images/post-mg6qu4g0/01.jpg)
+![](/images/collection/posts/mg6qu4g0/01.jpg)
 
-![](/images/post-mg6qu4g0/02.jpg)
+![](/images/collection/posts/mg6qu4g0/02.jpg)
 
 6 个人，3 小时，一场没有议程的交谈，却意外地成为了近期最治愈的时光。
 
@@ -17,7 +17,7 @@ banner: /images/post-mg6qu4g0/cover.png
 
 活动开始时，只有我、姜姜和 YZ 三人。
 
-![](/images/post-mg6qu4g0/03.jpg)
+![](/images/collection/posts/mg6qu4g0/03.jpg)
 
 我们聊起了近期组织活动遇到的困境——国庆期间的两个活动响应都不太理想。
 
@@ -35,7 +35,7 @@ banner: /images/post-mg6qu4g0/cover.png
 
 就在我们深入交流时，W、MY 和瑞咖啡的 M 陆续加入，让谈话走向了意想不到的方向。
 
-![](/images/post-mg6qu4g0/04.jpg)
+![](/images/collection/posts/mg6qu4g0/04.jpg)
 
 M——瑞咖啡的「少东家」，学的是动物科学，热爱钓鱼。
 
@@ -49,7 +49,7 @@ M——瑞咖啡的「少东家」，学的是动物科学，热爱钓鱼。
 
 YZ 分享了她与女儿的相处之道，关于该给孩子多少自由度的讨论，引发了在场每个人的思考。
 
-![](/images/post-mg6qu4g0/05.jpg)
+![](/images/collection/posts/mg6qu4g0/05.jpg)
 
 有趣的是，没有孩子的我们几个，并没有感到隔阂，反而在这些真实的育儿故事中，看到了不同生活阶段的智慧。
 
@@ -67,7 +67,7 @@ YZ 也加入讨论，分享了她和女儿坐船出游的趣事。
 
 这次活动偏离了预设的「正题」，却意外地实现了社区创建的初心——增进人与人之间的真实连接。
 
-![](/images/post-mg6qu4g0/06.jpg)
+![](/images/collection/posts/mg6qu4g0/06.jpg)
 
 特别要感谢瑞咖啡的老板，为了我们的活动特意调整了排班。
 

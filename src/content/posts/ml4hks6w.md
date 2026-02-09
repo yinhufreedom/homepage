@@ -7,7 +7,7 @@ banner:
 
 前几日上午我们在银湖公园的草地上，完成了一场「与身体温柔对话」。
 
-![](/images/post-ml4hks6w/02.jpg)
+![](/images/collection/posts/ml4hks6w/02.jpg)
 
 感谢每一位带着信任与笑意前来的你——
 
@@ -15,7 +15,7 @@ banner:
 
 互相传递艾草锤与「平安喜乐」碰杯，让温暖在掌心流动。
 
-![](/images/post-ml4hks6w/03.jpg)
+![](/images/collection/posts/ml4hks6w/03.jpg)
 
 我们一同认真记录下感受，让这个上午不只被身体记住，也被文字留存——
 
@@ -29,15 +29,15 @@ banner:
 
 每一句真实的反馈，都是对这场相遇最好的回应。
 
-![](/images/post-ml4hks6w/06.jpg)
+![](/images/collection/posts/ml4hks6w/06.jpg)
 
 我们不只是学习「拍八虚」的位置、八段锦的招式，更是在这个过程中，学会停下来，感受身体的语言，接收自然的能量。
 
 感谢那只安静晒太阳的小狗，感谢这一片包容的草地与蓝天，也感谢愿意在忙碌生活中，抽出这样一个清晨，好好照顾自己的你。
 
-![](/images/post-ml4hks6w/04.jpg)
+![](/images/collection/posts/ml4hks6w/04.jpg)
 
-![](/images/post-ml4hks6w/05.jpg)
+![](/images/collection/posts/ml4hks6w/05.jpg)
 
 养生不是遥远的道理，而是：一次专注的呼吸，一场舒适的伸展，一杯温暖的茶，一群同频的人。
 
