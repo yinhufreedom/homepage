@@ -13,7 +13,7 @@ const { locale } = Astro.props;
 ---
 
 <div class="HeroSection h-[640px] bg-no-repeat bg-center bg-cover" style={`background-image: url("${banner.src}");`}>
-  <div class="HeroSection-content max-w-screen-xl mx-auto flex flex-col items-center justify-center">
+  <div class="HeroSection-content max-w-screen-xl mx-auto px-4 flex flex-col items-center justify-center">
     <h1 class="mb-6 text-6xl sm:text-8xl font-extrabold text-center text-white" style="text-shadow: 3px 3px 24px #000;">{locale.heading}</h1>
     <p class="m-0 text-xl sm:text-2xl text-neutral-100 text-center" style="text-shadow: 3px 3px 24px #000;">{locale.slogan}</p>
     <ActionBar className="mt-12" locale={locale} client:visible />
