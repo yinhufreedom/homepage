@@ -13,25 +13,15 @@ interface Props {
 const { slug, title, description, date, banner }: Props = Astro.props;
 
 const formattedDate = formatDate(date);
-
-const articleClass = banner
-  ? 'bg-cover bg-center bg-gray-900/80'
-  : 'bg-white';
-
-const articleStyle = banner
-  ? `background-image: url('${banner}')`
-  : '';
-
-const contentClass = banner
-  ? 'bg-gray-100/90'
-  : '';
 ---
 
-<article
-  class={`rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col ${articleClass}`}
-  style={articleStyle}
->
-  <div class={`p-6 flex flex-col flex-grow ${contentClass}`}>
+<article class="rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col bg-white">
+  {banner ? (
+    <div class="w-full h-48 bg-cover bg-center" style={`background-image: url('${banner}')`}></div>
+  ) : (
+    <div class="w-full h-48 bg-gray-200"></div>
+  )}
+  <div class="p-6 flex flex-col flex-grow">
     <div class="mb-4">
       <h2 class="text-xl font-semibold mb-2 text-gray-900">
         <a href={`/posts/${slug}`} class="hover:text-blue-600 transition-colors">
