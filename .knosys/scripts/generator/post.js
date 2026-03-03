@@ -1,10 +1,13 @@
 const { join: joinPath } = require('path');
-const { existsSync } = require('fs');
 
-const { cp, resolveRootPath, getImageFileNames, readDirDeeply, ensureDirExists, readEntity, saveData } = require('../helper');
+const { cp, getImageFileNames, readDirDeeply, ensureDirExists, readEntity, saveData } = require('../helper');
 
 function getIdFromDate(date = new Date) {
   return (typeof date === 'string' ? new Date(date) : date).getTime().toString(36);
+}
+
+function getImagePathPart() {
+  return 'images/collection/posts';
 }
 
 function extractImageReferences(content) {
@@ -30,25 +33,12 @@ function extractImageReferences(content) {
   return imageReferences;
 }
 
-function generatePosts(dsDir) {
-  const localRootPath = resolveRootPath();
+function generatePosts(_, { recordFullPath }, params, collectionDirPath, imageDistDirPath) {
+  const imagePathPart = getImagePathPart();
 
-  const sourceDirPath = joinPath(localRootPath, dsDir, 'posts');
-
-  if (!existsSync(sourceDirPath)) {
-    return console.log(`[ERROR] \`${dsDir}\` is not a valid directory`);
-  }
-
-  const distDirPath = joinPath(localRootPath, 'src/content/posts');
-  const imagePathPart = 'images/collection/posts';
-  const imageDistDirPath = joinPath(localRootPath, 'public', imagePathPart);
-
-  ensureDirExists(distDirPath, true);
-  ensureDirExists(imageDistDirPath, true);
-
-  readDirDeeply(sourceDirPath, ['year', 'month', 'day'], {}, (_, { year, month, day }) => {
-    const entityDirPath = joinPath(sourceDirPath, year, month, day);
-    const { title, date = `${year}-${month}-${day} 00:00:00 +0800`, ...others } = readEntity(entityDirPath);
+  readDirDeeply(recordFullPath, ['month', 'day'], {}, (_, { month, day }) => {
+    const entityDirPath = joinPath(recordFullPath, month, day);
+    const { title, date = `${params.id}-${month}-${day} 00:00:00 +0800`, ...others } = readEntity(entityDirPath);
 
     if (!title) {
       return;
@@ -94,7 +84,7 @@ function generatePosts(dsDir) {
       });
     }
 
-    saveData(joinPath(distDirPath, `${postId}.md`), `---
+    saveData(joinPath(collectionDirPath, `${postId}.md`), `---
 title: ${title}
 description: ${others.description || ''}
 date: ${date}
@@ -106,4 +96,4 @@ ${resolvedContent}
   });
 }
 
-module.exports = { generatePosts };
+module.exports = { getImagePathPart, generatePosts };

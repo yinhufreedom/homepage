@@ -1,30 +1,15 @@
 const { join: joinPath } = require('path');
-const { existsSync } = require('fs');
 
-const { resolveRootPath, readDirDeeply, ensureDirExists, readData, saveData } = require('../helper');
+const { readEntity, saveData } = require('../helper');
 
-function generateEvents(dsDir) {
-  const localRootPath = resolveRootPath();
+function generateEvent(_, { recordFullPath }, params, collectionDirPath) {
+  const { organization, cancelled, ...others } = readEntity(recordFullPath);
 
-  const sourceDirPath = joinPath(localRootPath, dsDir, 'events');
-
-  if (!existsSync(sourceDirPath)) {
-    return console.log(`[ERROR] \`${dsDir}\` is not a valid directory`);
+  if (cancelled || !organization.includes('银湖创联')) {
+    return;
   }
 
-  const distDirPath = joinPath(localRootPath, 'src/content/events');
-
-  ensureDirExists(distDirPath, true);
-
-  readDirDeeply(sourceDirPath, ['eventId'], {}, eventId => {
-    const { organization, cancelled, ...others } = readData(joinPath(sourceDirPath, eventId, 'basic.yml'));
-
-    if (cancelled || !organization.includes('银湖创联')) {
-      return;
-    }
-
-    saveData(joinPath(distDirPath, `${eventId}.yml`), others);
-  });
+  saveData(joinPath(collectionDirPath, `${params.id}.yml`), others);
 }
 
-module.exports = { generateEvents };
+module.exports = { generateEvent };

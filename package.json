@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "gen": "node .knosys/scripts gen",
+    "receive": "node .knosys/scripts receive",
+    "sync": "node .knosys/scripts sync",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
@@ -12,6 +13,7 @@
   },
   "devDependencies": {
     "@knosys/sdk": "0.0.3",
+    "@larknosys/sdk": "0.0.1",
     "@ntks/toolbox": "0.0.6",
     "@types/node": "25.2.0",
     "dotenv": "16.4.5",
