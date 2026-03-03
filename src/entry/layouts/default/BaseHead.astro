@@ -45,3 +45,15 @@ const { title, description, image = resolvePath('/blog-placeholder-1.jpg') } = A
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?dd849064e18d8853aed1bf804bd77903";
+    var s = document.getElementsByTagName("script")[0];
+    if (s && s.parentNode) {
+      s.parentNode.insertBefore(hm, s);
+    }
+  })();
+</script>
