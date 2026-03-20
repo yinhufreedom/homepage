@@ -38,7 +38,7 @@ jobs:
         id: check-changes
         run: |
           cd data-dist
-          if [ -n "$(git status --porcelain data/)" ]; then
+          if [ -n "$(git status --porcelain src/)" ]; then
             echo "has_changes=true" >> $GITHUB_OUTPUT
           else
             echo "has_changes=false" >> $GITHUB_OUTPUT
@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: changed-data
-          path: data-dist/data
+          path: data-dist/src
   commit-changes:
     needs: yinhu-homepage-messenger-receive
     runs-on: ubuntu-latest
@@ -63,7 +63,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: changed-data
-          path: data
+          path: src
       - name: Commit changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
